@@ -1,0 +1,64 @@
+2023-04-30 23:11:03 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.16 on localhost.localdomain with PID 20273 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-04-30 23:11:03 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-30 23:11:04 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.882 seconds (JVM running for 2.732)
+2023-04-30 23:11:04 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App is started
+2023-04-30 23:11:04 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-04-30 23:11:04 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices!
+2023-04-30 23:13:10 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.16 on localhost.localdomain with PID 20393 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-04-30 23:13:10 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-30 23:13:11 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.592 seconds (JVM running for 2.364)
+2023-04-30 23:13:11 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App is started
+2023-04-30 23:13:11 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-04-30 23:13:11 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices!
+2023-04-30 23:13:11 [main] INFO  c.m.d.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-04-30 23:13:11 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dolor varius elit id Elasticsearch ipsum lectus in
+2023-04-30 23:13:21 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text in turpis consectetur in varius Spring tristique in ut
+2023-04-30 23:13:31 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text in sit consectetur id Java ornare dignissim
+2023-04-30 23:13:41 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dolor lectus sit pharetra mauris Microservices tristique ornare tempus
+2023-04-30 23:13:51 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text varius venenatis sit id Java dolor in adipiscing
+2023-04-30 23:14:01 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text lectus ultricies tempus lectus ultricies turpis lectus Java consectetur ipsum ipsum ornare ornare varius
+2023-04-30 23:14:11 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text elit dolor consectetur ultricies adipiscing sit ultricies adipiscing Kafka elit elit ornare turpis consectetur id sit
+2023-04-30 23:14:21 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text in turpis venenatis sit Spring mauris venenatis turpis
+2023-04-30 23:14:31 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ultricies dignissim ut tempus ultricies varius tristique mauris Java mauris mauris in ut in ultricies
+2023-04-30 23:14:41 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text mauris ultricies ut Java elit in
+2023-04-30 23:14:51 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ultricies ultricies consectetur pharetra consectetur dignissim ipsum Spring tristique ultricies ornare mauris lectus adipiscing
+2023-04-30 23:15:01 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text sit dignissim turpis id id Elasticsearch consectetur dolor pharetra
+2023-04-30 23:15:11 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ornare adipiscing varius sit ornare venenatis tristique Java consectetur tristique elit id dignissim
+2023-04-30 23:15:21 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dignissim elit ornare tempus tempus Elasticsearch dolor dolor dignissim
+2023-04-30 23:15:31 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text id in venenatis pharetra adipiscing pharetra elit Elasticsearch ornare ornare consectetur varius varius dignissim
+2023-04-30 23:15:41 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text adipiscing in venenatis ut elit Spring ut elit elit tempus
+2023-04-30 23:15:51 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text venenatis in ipsum Microservices adipiscing dignissim
+2023-04-30 23:16:01 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ut varius ipsum mauris tempus ornare Spring dolor dolor ut ornare
+2023-04-30 23:16:11 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ornare pharetra venenatis id ipsum Elasticsearch venenatis mauris consectetur
+2023-04-30 23:16:21 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text elit sit varius venenatis lectus Spring ultricies mauris tristique ultricies
+2023-04-30 23:16:31 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ut venenatis sit ornare mauris id pharetra pharetra Spring venenatis dolor mauris in dolor id
+2023-04-30 23:16:41 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text in elit sit id varius consectetur dignissim varius Kafka turpis venenatis dignissim adipiscing ultricies varius
+2023-04-30 23:16:51 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text pharetra in id id elit ipsum tempus Java adipiscing varius ipsum dignissim id
+2023-04-30 23:17:01 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dignissim lectus dolor adipiscing mauris ipsum lectus Kafka varius tristique lectus ultricies sit
+2023-04-30 23:17:11 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text consectetur dolor elit dolor ornare elit consectetur Kafka elit sit lectus id sit in
+2023-04-30 23:17:21 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ut ornare tempus Spring ipsum sit
+2023-04-30 23:17:31 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dolor varius adipiscing consectetur varius mauris Microservices sit ipsum ultricies varius
+2023-04-30 23:17:41 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text in pharetra ornare tempus consectetur lectus lectus Spring lectus lectus consectetur elit venenatis
+2023-04-30 23:17:51 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text tristique dignissim dignissim ipsum ipsum pharetra Kafka dignissim turpis id dignissim sit
+2023-04-30 23:18:01 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text id elit tempus elit Kafka sit ultricies
+2023-04-30 23:18:11 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text pharetra in elit lectus consectetur Java dignissim dignissim tempus
+2023-04-30 23:18:21 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text sit ornare ornare dolor ipsum ornare venenatis ornare Java elit ornare consectetur mauris pharetra lectus adipiscing
+2023-04-30 23:18:31 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text venenatis adipiscing consectetur Microservices id ornare
+2023-04-30 23:18:41 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text turpis dignissim ut dignissim dolor id lectus tempus Spring venenatis turpis id ornare tristique varius ipsum
+2023-04-30 23:18:51 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text venenatis ornare varius sit turpis pharetra Java ut lectus in ut
+2023-04-30 23:19:01 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text id sit id elit ut pharetra Kafka mauris venenatis tristique in
+2023-04-30 23:19:11 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text varius adipiscing turpis elit Kafka in adipiscing ipsum
+2023-04-30 23:19:21 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ipsum ultricies tempus tristique dolor Microservices turpis dignissim ipsum dignissim
+2023-04-30 23:19:31 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ornare consectetur venenatis Spring adipiscing tempus
+2023-04-30 23:19:41 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ultricies varius pharetra ultricies adipiscing mauris turpis Spring sit turpis ultricies adipiscing tempus ornare
+2023-04-30 23:19:51 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text in ipsum tristique in pharetra Spring tristique in dolor
+2023-04-30 23:20:01 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text id ultricies in dignissim consectetur sit id Kafka dolor tempus in consectetur dolor
+2023-04-30 23:20:11 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text ornare lectus ultricies mauris mauris Java mauris in ultricies
+2023-04-30 23:20:21 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text dignissim turpis dolor ultricies dignissim dolor ornare adipiscing Java pharetra in pharetra ipsum mauris elit lectus
+2023-04-30 23:20:31 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text varius ornare in consectetur tempus Kafka lectus varius consectetur in
+2023-04-30 23:20:41 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text turpis ut varius tempus id Microservices ornare adipiscing id elit
+2023-04-30 23:20:51 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text elit dignissim dolor ut ipsum varius Microservices elit adipiscing id adipiscing
+2023-04-30 23:21:01 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text elit ipsum dolor lectus adipiscing turpis Elasticsearch venenatis in ut ultricies dignissim
+2023-04-30 23:21:11 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text turpis varius turpis consectetur turpis in Microservices venenatis sit ut dolor pharetra
+2023-04-30 23:21:21 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text lectus tempus ipsum dignissim mauris dolor ut ipsum Elasticsearch tristique turpis tempus turpis pharetra tristique tempus
+2023-04-30 23:21:31 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text tempus dignissim id turpis elit Microservices tristique consectetur consectetur
