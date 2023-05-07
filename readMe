@@ -1,0 +1,7 @@
+-Spinning up kafka brokers , zookeeper and schema-registry using docker-compose
+ docker-compose -f common.yml -f kafka_cluster.yml up
+
+-Running Kafkacat using docker image
+
+docker run -it --network=host confluentinc/cp-kafkacat kafkacat -L -b localhost:39092
+
