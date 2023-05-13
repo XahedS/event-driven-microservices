@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: twitter-to-kafka-service
+
+  profiles:
+    active: twitter_to_kafka
+
+  cloud:
+    config:
+      name: config-client-twitter_to_kafa
+
+  config:
+   import: configserver:http://localhost:8888
