@@ -5,3 +5,24 @@
 
 docker run -it --network=host confluentinc/cp-kafkacat kafkacat -L -b localhost:39092
 
+- Pushing changes from a local branch to the remote repository i.e. pushing config-server-repository to the github based repo 
+ git@github.com:XahedS/spring-cloud-config-server-repository.git
+ - Create a new git repo in github
+ - Create a new ssh-key, use enter when asked for file name and pass phrase. Hinted file will be created at ~/.ssh/ file path. File with .pub is
+the public key whereas without .pub extension is the private key.
+ssh-keygen -t ed25519 -C "zahidsaleem0440@gmail.com"
+ - Make sure agent is up and running
+eval "$(ssh-agent -s)"
+ - Add newly created private key to the server ssh agent
+ssh-add ~/.ssh/id_ed25519
+ - Check whether the key has been added or not
+ssh-add -l
+ - Copy the public key and paste it in github settings->SSH&GPG Keys->NewSSHKey
+ - Go to the config-server-repository folder and add the remote repo and then  push local branch to the remote repo
+git remote add origin git@github.com:XahedS/spring-cloud-config-server-repository.git
+git push -u origin main 
+
+	
+-Classic Personal Access Token Generated From Github for 30days on 14May23
+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
+

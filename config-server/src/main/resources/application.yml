@@ -13,7 +13,12 @@ spring:
     config:
       server:
         git:
-          uri: /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server-repository
-          default-label: master
+          uri: git@github.com:XahedS/spring-cloud-config-server-repository.git
+          username: XahedS
+          password: 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
+          #Below two fields of uri & default were used for local-repo
+#          uri: /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server-repository
+#          default-label: master
+          default-label: main
           clone-on-start: true
     fail-fast: true
