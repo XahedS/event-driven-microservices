@@ -11,3 +11,8 @@ spring:
 
   config:
    import: configserver:http://localhost:8888
+
+  security:
+    user:
+      name: spring_cloud_user
+      password: springCloud_Pwd!
