@@ -26,3 +26,14 @@ git push -u origin main
 -Classic Personal Access Token Generated From Github for 30days on 14May23
 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
 
+- Setting encryption key in enviornment variable.
+ - Define enviornment varible in the application.yml. e.g.
+jasypt:
+  encryptor:
+    password: ${JASYPT_ENCRYPTOR_PASSWORD}
+ - In terminal run following command to assign value to new enviornment variable
+export JASYPT_ENCRYPTOR_PASSWORD='Demo_Pwd!2020'
+ - Check whether it has been created or not:
+echo $JASYPT_ENCRYPTOR_PASSWORD
+ - Restart IntelliJ so that it can see the new env variable.
+ - Remember on reboot this env variable will not be available. Add it to bash profile!
