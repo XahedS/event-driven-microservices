@@ -1,0 +1,10 @@
+2023-05-06 14:08:49 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.16 on localhost.localdomain with PID 11108 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-06 14:08:49 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-05-06 14:08:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.729 seconds (JVM running for 2.784)
+2023-05-06 14:08:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App is started
+2023-05-06 14:08:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-05-06 14:08:50 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices!
+2023-05-06 14:08:50 [main] INFO  c.m.d.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-05-06 14:08:50 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text in adipiscing consectetur ut pharetra venenatis dolor dignissim Java elit mauris dignissim mauris tempus adipiscing
+2023-05-06 14:09:00 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text tristique venenatis tristique Spring turpis in
+2023-05-06 14:09:10 [pool-1-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text elit elit consectetur Microservices tempus in

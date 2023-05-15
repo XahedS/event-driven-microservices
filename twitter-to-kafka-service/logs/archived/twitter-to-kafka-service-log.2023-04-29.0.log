@@ -1,0 +1,6 @@
+2023-04-29 23:42:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.16 on localhost.localdomain with PID 14140 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-04-29 23:42:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-04-29 23:42:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 2.189 seconds (JVM running for 3.032)
+2023-04-29 23:42:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App is started
+2023-04-29 23:42:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-04-29 23:42:40 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Hello microservices!
