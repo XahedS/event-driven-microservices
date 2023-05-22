@@ -1,0 +1,387 @@
+2023-05-22 22:54:56 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 10612 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-22 22:54:56 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-05-22 22:54:56 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-05-22 22:54:58 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f5f3395b-fb9b-3408-9342-bea118ce518e
+2023-05-22 22:54:58 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configServerClient [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:54:58 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:54:58 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-05-22 22:54:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-05-22 22:54:59 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-05-22 22:54:59 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-22 22:54:59 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-22 22:54:59 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-22 22:54:59 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3095 ms
+2023-05-22 22:54:59 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-05-22 22:54:59 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-05-22 22:54:59 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2023-05-22 22:54:59 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWITHHMACSHA512ANDAES_256
+2023-05-22 22:54:59 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2023-05-22 22:54:59 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2023-05-22 22:54:59 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2023-05-22 22:54:59 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2023-05-22 22:54:59 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2023-05-22 22:54:59 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.iv-generator-classname, using default value: org.jasypt.iv.RandomIvGenerator
+2023-05-22 22:54:59 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2023-05-22 22:55:00 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@237add, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@491cafec, org.springframework.security.web.context.SecurityContextPersistenceFilter@a1691c0, org.springframework.security.web.header.HeaderWriterFilter@7cfb0c4c, org.springframework.security.web.csrf.CsrfFilter@7cff3f1d, org.springframework.security.web.authentication.logout.LogoutFilter@2199e845, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@54c425b1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@715fa8c5, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@cbd40c1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1d6a8386, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2f995afc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@377949f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fa86cb8, org.springframework.security.web.session.SessionManagementFilter@6b63abdc, org.springframework.security.web.access.ExceptionTranslationFilter@677ce519, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4776e209]
+2023-05-22 22:55:01 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+2023-05-22 22:55:01 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+2023-05-22 22:55:01 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
+2023-05-22 22:55:03 [sshd-JGitSshClient[4afdfc0f]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+java.io.StreamCorruptedException: Invalid DER: length field too big: 186
+	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
+	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.decodeRSAKeyPair(RSAPEMResourceKeyPairParser.java:114)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.extractKeyPairs(RSAPEMResourceKeyPairParser.java:76)
+	at org.apache.sshd.common.config.keys.loader.pem.AbstractPEMResourceKeyPairParser.extractKeyPairs(AbstractPEMResourceKeyPairParser.java:172)
+	at org.apache.sshd.common.config.keys.loader.AbstractKeyPairResourceParser.loadKeyPairs(AbstractKeyPairResourceParser.java:117)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.pem.PEMResourceParserUtils$1.loadKeyPairs(PEMResourceParserUtils.java:53)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:157)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:148)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:139)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:130)
+	at org.apache.sshd.common.util.security.SecurityUtils.loadKeyPairIdentities(SecurityUtils.java:522)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:114)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:89)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.access$0(CachingKeyPairProvider.java:81)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider$CancellingKeyPairIterator.hasNext(CachingKeyPairProvider.java:169)
+	at org.eclipse.jgit.internal.transport.sshd.JGitSshClient$CombinedKeyIdentityProvider$1.hasNext(JGitSshClient.java:422)
+	at org.apache.sshd.common.keyprovider.MultiKeyIdentityIterator.hasNext(MultiKeyIdentityIterator.java:86)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator$1$1.hasNext(UserAuthPublicKeyIterator.java:119)
+	at org.apache.sshd.common.util.helper.LazyIterablesConcatenator$1.hasNext(LazyIterablesConcatenator.java:68)
+	at org.apache.sshd.common.util.GenericUtils.selectNextMatchingValue(GenericUtils.java:808)
+	at org.apache.sshd.common.util.helper.LazyMatchingTypeIterator.hasNext(LazyMatchingTypeIterator.java:62)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator.hasNext(UserAuthPublicKeyIterator.java:196)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.resolveAttemptedPublicKeyIdentity(UserAuthPublicKey.java:212)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.sendAuthDataRequest(UserAuthPublicKey.java:131)
+	at org.apache.sshd.client.auth.AbstractUserAuth.process(AbstractUserAuth.java:71)
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:317)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:503)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:429)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1466)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:389)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:198)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-05-22 22:55:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-05-22 22:55:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-05-22 22:55:07 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 12.31 seconds (JVM running for 13.53)
+2023-05-22 22:55:29 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-22 22:55:29 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-22 22:55:29 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-05-22 22:56:29 [sshd-JGitSshClient[61bbb217]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+java.io.StreamCorruptedException: Invalid DER: length field too big: 186
+	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
+	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.decodeRSAKeyPair(RSAPEMResourceKeyPairParser.java:114)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.extractKeyPairs(RSAPEMResourceKeyPairParser.java:76)
+	at org.apache.sshd.common.config.keys.loader.pem.AbstractPEMResourceKeyPairParser.extractKeyPairs(AbstractPEMResourceKeyPairParser.java:172)
+	at org.apache.sshd.common.config.keys.loader.AbstractKeyPairResourceParser.loadKeyPairs(AbstractKeyPairResourceParser.java:117)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.pem.PEMResourceParserUtils$1.loadKeyPairs(PEMResourceParserUtils.java:53)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:157)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:148)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:139)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:130)
+	at org.apache.sshd.common.util.security.SecurityUtils.loadKeyPairIdentities(SecurityUtils.java:522)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:114)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:89)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.access$0(CachingKeyPairProvider.java:81)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider$CancellingKeyPairIterator.hasNext(CachingKeyPairProvider.java:169)
+	at org.eclipse.jgit.internal.transport.sshd.JGitSshClient$CombinedKeyIdentityProvider$1.hasNext(JGitSshClient.java:422)
+	at org.apache.sshd.common.keyprovider.MultiKeyIdentityIterator.hasNext(MultiKeyIdentityIterator.java:86)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator$1$1.hasNext(UserAuthPublicKeyIterator.java:119)
+	at org.apache.sshd.common.util.helper.LazyIterablesConcatenator$1.hasNext(LazyIterablesConcatenator.java:68)
+	at org.apache.sshd.common.util.GenericUtils.selectNextMatchingValue(GenericUtils.java:808)
+	at org.apache.sshd.common.util.helper.LazyMatchingTypeIterator.hasNext(LazyMatchingTypeIterator.java:62)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator.hasNext(UserAuthPublicKeyIterator.java:196)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.resolveAttemptedPublicKeyIdentity(UserAuthPublicKey.java:212)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.sendAuthDataRequest(UserAuthPublicKey.java:131)
+	at org.apache.sshd.client.auth.AbstractUserAuth.process(AbstractUserAuth.java:71)
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:317)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:503)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:429)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1466)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:389)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:198)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-05-22 22:56:31 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13080302390516381331/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-13080302390516381331/'
+2023-05-22 22:56:50 [sshd-JGitSshClient[6e778093]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+java.io.StreamCorruptedException: Invalid DER: length field too big: 186
+	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
+	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.decodeRSAKeyPair(RSAPEMResourceKeyPairParser.java:114)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.extractKeyPairs(RSAPEMResourceKeyPairParser.java:76)
+	at org.apache.sshd.common.config.keys.loader.pem.AbstractPEMResourceKeyPairParser.extractKeyPairs(AbstractPEMResourceKeyPairParser.java:172)
+	at org.apache.sshd.common.config.keys.loader.AbstractKeyPairResourceParser.loadKeyPairs(AbstractKeyPairResourceParser.java:117)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.pem.PEMResourceParserUtils$1.loadKeyPairs(PEMResourceParserUtils.java:53)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:157)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:148)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:139)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:130)
+	at org.apache.sshd.common.util.security.SecurityUtils.loadKeyPairIdentities(SecurityUtils.java:522)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:114)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:89)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.access$0(CachingKeyPairProvider.java:81)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider$CancellingKeyPairIterator.hasNext(CachingKeyPairProvider.java:169)
+	at org.eclipse.jgit.internal.transport.sshd.JGitSshClient$CombinedKeyIdentityProvider$1.hasNext(JGitSshClient.java:422)
+	at org.apache.sshd.common.keyprovider.MultiKeyIdentityIterator.hasNext(MultiKeyIdentityIterator.java:86)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator$1$1.hasNext(UserAuthPublicKeyIterator.java:119)
+	at org.apache.sshd.common.util.helper.LazyIterablesConcatenator$1.hasNext(LazyIterablesConcatenator.java:68)
+	at org.apache.sshd.common.util.GenericUtils.selectNextMatchingValue(GenericUtils.java:808)
+	at org.apache.sshd.common.util.helper.LazyMatchingTypeIterator.hasNext(LazyMatchingTypeIterator.java:62)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator.hasNext(UserAuthPublicKeyIterator.java:196)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.resolveAttemptedPublicKeyIdentity(UserAuthPublicKey.java:212)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.sendAuthDataRequest(UserAuthPublicKey.java:131)
+	at org.apache.sshd.client.auth.AbstractUserAuth.process(AbstractUserAuth.java:71)
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:317)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:503)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:429)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1466)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:389)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:198)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-05-22 22:56:51 [http-nio-8888-exec-9] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13080302390516381331/config-client.yml]' via location 'file:/tmp/config-repo-13080302390516381331/'
+2023-05-22 23:24:40 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-05-22 23:24:40 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 12331 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-22 23:24:40 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-05-22 23:24:42 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f5f3395b-fb9b-3408-9342-bea118ce518e
+2023-05-22 23:24:42 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configServerClient [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:24:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:24:43 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-05-22 23:24:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-05-22 23:24:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-05-22 23:24:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-22 23:24:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-22 23:24:43 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-22 23:24:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2812 ms
+2023-05-22 23:24:43 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-05-22 23:24:43 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-05-22 23:24:43 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2023-05-22 23:24:43 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWITHHMACSHA512ANDAES_256
+2023-05-22 23:24:43 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2023-05-22 23:24:43 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2023-05-22 23:24:43 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2023-05-22 23:24:43 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2023-05-22 23:24:43 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2023-05-22 23:24:43 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.iv-generator-classname, using default value: org.jasypt.iv.RandomIvGenerator
+2023-05-22 23:24:43 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2023-05-22 23:24:44 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c2cf597, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@724bf25f, org.springframework.security.web.context.SecurityContextPersistenceFilter@79627d27, org.springframework.security.web.header.HeaderWriterFilter@6097fca9, org.springframework.security.web.csrf.CsrfFilter@15c6027d, org.springframework.security.web.authentication.logout.LogoutFilter@65be88ae, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e8fdd19, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@668cc9a2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2abafa97, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@42679fc2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b5b9333, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52b959df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f6cc7da, org.springframework.security.web.session.SessionManagementFilter@5729b410, org.springframework.security.web.access.ExceptionTranslationFilter@eed890d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1213ffbc]
+2023-05-22 23:24:45 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+2023-05-22 23:24:45 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+2023-05-22 23:24:45 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
+2023-05-22 23:24:47 [sshd-JGitSshClient[a2df0d5]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+java.io.StreamCorruptedException: Invalid DER: length field too big: 186
+	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
+	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.decodeRSAKeyPair(RSAPEMResourceKeyPairParser.java:114)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.extractKeyPairs(RSAPEMResourceKeyPairParser.java:76)
+	at org.apache.sshd.common.config.keys.loader.pem.AbstractPEMResourceKeyPairParser.extractKeyPairs(AbstractPEMResourceKeyPairParser.java:172)
+	at org.apache.sshd.common.config.keys.loader.AbstractKeyPairResourceParser.loadKeyPairs(AbstractKeyPairResourceParser.java:117)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.pem.PEMResourceParserUtils$1.loadKeyPairs(PEMResourceParserUtils.java:53)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:157)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:148)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:139)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:130)
+	at org.apache.sshd.common.util.security.SecurityUtils.loadKeyPairIdentities(SecurityUtils.java:522)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:114)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:89)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.access$0(CachingKeyPairProvider.java:81)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider$CancellingKeyPairIterator.hasNext(CachingKeyPairProvider.java:169)
+	at org.eclipse.jgit.internal.transport.sshd.JGitSshClient$CombinedKeyIdentityProvider$1.hasNext(JGitSshClient.java:422)
+	at org.apache.sshd.common.keyprovider.MultiKeyIdentityIterator.hasNext(MultiKeyIdentityIterator.java:86)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator$1$1.hasNext(UserAuthPublicKeyIterator.java:119)
+	at org.apache.sshd.common.util.helper.LazyIterablesConcatenator$1.hasNext(LazyIterablesConcatenator.java:68)
+	at org.apache.sshd.common.util.GenericUtils.selectNextMatchingValue(GenericUtils.java:808)
+	at org.apache.sshd.common.util.helper.LazyMatchingTypeIterator.hasNext(LazyMatchingTypeIterator.java:62)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator.hasNext(UserAuthPublicKeyIterator.java:196)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.resolveAttemptedPublicKeyIdentity(UserAuthPublicKey.java:212)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.sendAuthDataRequest(UserAuthPublicKey.java:131)
+	at org.apache.sshd.client.auth.AbstractUserAuth.process(AbstractUserAuth.java:71)
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:317)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:503)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:429)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1466)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:389)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:198)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-05-22 23:24:51 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-05-22 23:24:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-05-22 23:24:51 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 11.449 seconds (JVM running for 12.328)
+2023-05-22 23:25:00 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-22 23:25:00 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-22 23:25:00 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-22 23:48:55 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-05-22 23:48:55 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 14438 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-22 23:48:55 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-05-22 23:48:57 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=f5f3395b-fb9b-3408-9342-bea118ce518e
+2023-05-22 23:48:57 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configServerClient [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:48:57 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:48:57 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-05-22 23:48:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-05-22 23:48:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-05-22 23:48:57 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-22 23:48:57 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-22 23:48:57 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-22 23:48:57 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2612 ms
+2023-05-22 23:48:57 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-05-22 23:48:57 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-05-22 23:48:57 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor - String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2023-05-22 23:48:58 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWITHHMACSHA512ANDAES_256
+2023-05-22 23:48:58 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.key-obtention-iterations, using default value: 1000
+2023-05-22 23:48:58 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.pool-size, using default value: 1
+2023-05-22 23:48:58 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-name, using default value: null
+2023-05-22 23:48:58 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.provider-class-name, using default value: null
+2023-05-22 23:48:58 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.salt-generator-classname, using default value: org.jasypt.salt.RandomSaltGenerator
+2023-05-22 23:48:58 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.iv-generator-classname, using default value: org.jasypt.iv.RandomIvGenerator
+2023-05-22 23:48:58 [main] INFO  c.u.j.c.StringEncryptorBuilder - Encryptor config not found for property jasypt.encryptor.string-output-type, using default value: base64
+2023-05-22 23:48:58 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@724bf25f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2abafa97, org.springframework.security.web.context.SecurityContextPersistenceFilter@6371cf2f, org.springframework.security.web.header.HeaderWriterFilter@35eee641, org.springframework.security.web.csrf.CsrfFilter@5927f904, org.springframework.security.web.authentication.logout.LogoutFilter@62ade015, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35787726, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5aa62ee7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6f6cc7da, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5e50df2e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52b959df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38588dea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40717ed, org.springframework.security.web.session.SessionManagementFilter@64518270, org.springframework.security.web.access.ExceptionTranslationFilter@10f477e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@68a305eb]
+2023-05-22 23:48:59 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+2023-05-22 23:48:59 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+2023-05-22 23:48:59 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
+2023-05-22 23:49:01 [sshd-JGitSshClient[ae3c140]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+java.io.StreamCorruptedException: Invalid DER: length field too big: 186
+	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
+	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.decodeRSAKeyPair(RSAPEMResourceKeyPairParser.java:114)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.extractKeyPairs(RSAPEMResourceKeyPairParser.java:76)
+	at org.apache.sshd.common.config.keys.loader.pem.AbstractPEMResourceKeyPairParser.extractKeyPairs(AbstractPEMResourceKeyPairParser.java:172)
+	at org.apache.sshd.common.config.keys.loader.AbstractKeyPairResourceParser.loadKeyPairs(AbstractKeyPairResourceParser.java:117)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.pem.PEMResourceParserUtils$1.loadKeyPairs(PEMResourceParserUtils.java:53)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:157)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:148)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:139)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:130)
+	at org.apache.sshd.common.util.security.SecurityUtils.loadKeyPairIdentities(SecurityUtils.java:522)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:114)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:89)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.access$0(CachingKeyPairProvider.java:81)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider$CancellingKeyPairIterator.hasNext(CachingKeyPairProvider.java:169)
+	at org.eclipse.jgit.internal.transport.sshd.JGitSshClient$CombinedKeyIdentityProvider$1.hasNext(JGitSshClient.java:422)
+	at org.apache.sshd.common.keyprovider.MultiKeyIdentityIterator.hasNext(MultiKeyIdentityIterator.java:86)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator$1$1.hasNext(UserAuthPublicKeyIterator.java:119)
+	at org.apache.sshd.common.util.helper.LazyIterablesConcatenator$1.hasNext(LazyIterablesConcatenator.java:68)
+	at org.apache.sshd.common.util.GenericUtils.selectNextMatchingValue(GenericUtils.java:808)
+	at org.apache.sshd.common.util.helper.LazyMatchingTypeIterator.hasNext(LazyMatchingTypeIterator.java:62)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator.hasNext(UserAuthPublicKeyIterator.java:196)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.resolveAttemptedPublicKeyIdentity(UserAuthPublicKey.java:212)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.sendAuthDataRequest(UserAuthPublicKey.java:131)
+	at org.apache.sshd.client.auth.AbstractUserAuth.process(AbstractUserAuth.java:71)
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:317)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:503)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:429)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1466)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:389)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:198)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-05-22 23:49:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-05-22 23:49:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-05-22 23:49:04 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2023-05-22 23:49:04 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 10.877 seconds (JVM running for 11.789)
+2023-05-22 23:50:21 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-22 23:50:21 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-22 23:50:21 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms

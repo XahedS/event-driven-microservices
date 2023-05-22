@@ -12,5 +12,6 @@ public class TestJasypt {
         String result = standardPBEStringEncryptor.encrypt("springCloud_Pwd!");
         System.out.println(result);
         System.out.println(standardPBEStringEncryptor.decrypt(result));
+        System.out.println("Old password Decryption : " + standardPBEStringEncryptor.decrypt("o+Ei3+fudsNcFfSj/5lTSLvwgOcb1cYUyz8m+lEndMJfKS2Jiuy+q4DTA6cMcZDwYSApWM5MS+zXba5tNgCjNA=="));
     }
 }

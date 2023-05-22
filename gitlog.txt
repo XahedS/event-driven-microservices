@@ -1,0 +1,128 @@
+commit 272cf91f4688ebb2387c16960be085c03738df76
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Mon May 15 22:59:18 2023 +0500
+
+    only commented config-server/application.yml,this commit can be ignored
+
+commit dba2e99b61efde24d5a88dd824a993b37c59c161
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Sun May 14 23:35:58 2023 +0500
+
+    - Added jasypt encryption to encrypt the passwords being displayed in the application.yml files.
+    - in order to do that, playground module has been added to which passwords (used in application.yml) will be passed and it will outcome the encrypted password based on algorithm defined in Jasypt object.
+    - Tested it in config server and accessing the url http://localhost:8888/config/twitter_to_kafka asks for password. Providing it plain text password 'springCloud_Pwd!' works fine.
+    - Jasypt uses the enryption key in process of encrypting password. That key is visible in application.yml in variable jasypt.encryptor.password. Trying to place it in enviornment variable and use it so that it is also not visible in the application.yml.
+
+commit 21559266742f8aebcc7adcfe768a62ad9e8b2d50
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Sun May 14 16:38:05 2023 +0500
+
+    - Added spring boot starter security dependencies, config server is working fine. Accessing http://localhost:8888/config/twitter_to_kafka asks for login and password. However twitter-to-kafka-service seems not working and probably it is unable to access the config server as it is secured now. Will continue to learn more on this problem, right now undo the security configuraiton and found things are working fine. Committing nothing new infact!
+
+commit d03f4f671cc20b25c057e7499065c5e3debf5754
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Sun May 14 16:07:21 2023 +0500
+
+    - Started to add Security to the project. Added spring boot starter security dependencies and added spring.security.user.name & pass in application.yml of config-server & twitter-to-kafka-service modules.
+
+commit 4f285d09a4a45d0b1093a061c99cbc948f72cd8d
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Sun May 14 15:20:59 2023 +0500
+
+    - Earlier config server was fetching the configuration files from the local config-server-repository. Upgraded application to fetch properties files from remote repo managed at github.
+    - In order to achieve this, local spring-cloud-config-server-repository managed at github was added as a remote repo to the config-server-repository. Follow readme to achieve this.
+    - in config-server->application.yml->spring.cloud.config.server.git.uri & username & password added to connect to github repo.  Commented properties for local config-server-repository and infact renamed files available in local repo (for testing purposes)
+    - Run kafka cluster than configserver and than twitter-to-kafka-service in last. It is working but getting warning in config server.
+    
+    - Warning is "java.io.StreamCorruptedException: Invalid DER": length field too big: 186. Not spending too much time on it. Probably because of Properly not handshaking personal access tokens between config server and github.
+
+commit 778c08e76c3ef70654b84d9519af62bb2b245578
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Sat May 13 16:32:53 2023 +0500
+
+    - Tested what has been done till the last log. It is working now but some tweaking i.e. upgrading the dependancies versions to comply with spring boot version 2.7.11 I am using, removed/renamed bootstrap files as they are used in older versions of spring boot and now only application.yml is used.
+        - spring-cloud-dependencies.version shifted to 2021.0.4 from Hoxton.SR9
+        - spring-cloud-autoconfigure.version shifted to 2.7.11. from 2.6.1
+        - spring-cloud-starter-config.version shifted to 3.1.4 from 2.2.6.RELEASE
+       - spring-cloud.version shifted to 3.1.4 from 2.2.6.RELEASE
+     - In order to run application in this stage run following:
+       - Run kafka cluster: docker-compose -f common.yml -f kafka_cluster.yml up
+       - Run ConfigServer microservice so that it loads configuration files from git repo  config-server-repository.
+       - Run twitter-to-kafka-service microservice.
+    - Lastly Config server started normally but twitter-to-kafka-service microservice was unable to fetch configuration from the config server. For this issue application.yml was updated:
+      - spring.cloud.config.name was given exactly as mentioned in the config server repo.
+      -spring.config.import was given config server microservice address.
+
+commit d70ba7f851928cb5817cca50658bdfd42c873f60
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Fri May 12 16:42:17 2023 +0500
+
+    - Created ConfigServer module that will use the Config Server Repository and will get the configuration information.
+    - A new annotation @EnableConfigServer has been introduced to make this module Configuration Server.
+    - Added bootstrap.yml so that the config server will load the properties before the application is bootstrapped.
+    - PS: what can we do if we want to use similar configuration for each microservice and change some properties? Create logback.xml in common module which is used by all services and use that file in logback file used in each microservice (if required). This way we can change appenders in common logfile.xml and it will be applied to all logfiles of each module. Moved logback.xml from twitter-to-kafka service to app-config-data. Now user can create logback.xml in each microservice and add app-config-data logbackcommon.xml as resource in each.
+
+commit 7a08979e2bdfdf3a7cad554b1453a914575ccc95
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Fri May 12 15:25:44 2023 +0500
+
+    - Created ConfigServer module that will use the Config Server Repository and will get the configuration information.
+    - A new annotation @EnableConfigServer has been introduced to make this module Configuration Server.
+
+commit 7fbc3c3dc6d21721b2a12e5a5aad97dff83c1411
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Thu May 11 23:28:36 2023 +0500
+
+    - Externalized Configuration Microservices Pattern implementation started.
+    - Created config-server-repository that will hold the configuration data externally.
+    - Cut'ed all properties from application.yml in twitter-to-kafka-service module and pasted in the config-client-twitter_to_kafa.yml file. config-client.yml holds the general application properties whereas for each module seperate config-client-* file will be written.
+    - config-server-repository folder is git initte'd. Config server requires git repo to fetch data from.
+
+commit 7233f2de1c90f2ae6c09167b59e9de5db90fa35b
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Thu May 11 23:00:10 2023 +0500
+
+    - Completed implementation of KafkaProducer and requisite configurations.
+    -Code working now and running as well, mock tweets being printed and transferred to Kafka topics.
+    -Unable to make git compose file for the TwitterToKafkaServiceApplication.
+
+commit 4f1059564863e2deaf2f01741bd5d2db4a27a23c
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Sun May 7 22:19:29 2023 +0500
+
+    - Created KafkaProducer module, which will generate messages to be stored in topics and brokers.
+    - KafkaProducerConfig contains the Kafka producer configuration as defined in app-config-data KafkaProducerConfigData class. Moreover it creaetes Beans required to create kafkaTemplate.
+    - kafkaTemplate requires producerFactory and producerFactory requires producerConfig.
+    - TwitterKafkaProducer is implementation of KafkaProducer and uses kafkaTemplate method send to send the message to a specific topic. It also adds callback to the return of send method. this callback decides what to do on successful message sending and failure messsage sending to topic.
+
+commit 13bcae7b07fc5ed71ebf4b4563408bf81fc45b20
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Sun May 7 15:46:15 2023 +0500
+
+    - Schema Registry check completed.
+    - Three methods created in KafkaAdminClient createTopics checkTopicsCreated checkSchemaRegistry to ensure that kafka and schema regsitry are up and running and topics are created. This was required because we want to start our application in a single docker compose file. In case any of them is not runnig, whole project will fail.
+
+commit 70a5101559362ec86ecca3c2c4a64efa7f0a2ddc
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Sun May 7 14:54:44 2023 +0500
+
+    - app-config-data module created that will handle all the modules configuration for this project.
+    - Added Spring AOP Retry Template in common-config module for retrying topic or schema creation in kafka module
+    - Added kafka module. In this module three sub modules kafka model, admin and producer are added to handle kafka related tasks.
+    - Kafka model will hold the avro schema model for schema registry.
+    -kafka admin is kafka admin client implementation that will manage the kafka administration tasks i.e. topic creation and ensuring topics and schema registry are properly loaded or not using Spring AOP RetryTemplate.
+    - Completed above commits and started to work on schema Registry check.
+
+commit 010017ca3c030bafb6f6115a232c3e3193af3993
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Mon May 1 15:10:08 2023 +0500
+
+    -Working on CQRS model for event driven microservice architecture using kafka, elastic search and config server.
+    -Implemented mock twitter data and written a service "TwitterToKafkaService" that consumes mock twitter data and will publish to the kafka.
+    -Started making a config server for externalized configuration.
+
+commit b7aa32f7c58e9c2e745c4d226dda16de353654b8
+Author: zahid <zahidsaleem0440@gmail.com>
+Date:   Fri Apr 28 22:56:06 2023 +0500
+
+    initial-commit

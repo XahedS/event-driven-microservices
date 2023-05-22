@@ -1,0 +1,1108 @@
+2023-05-22 22:55:30 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.16 on localhost.localdomain with PID 10770 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-22 22:55:30 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - The following 1 profile is active: "twitter_to_kafka"
+2023-05-22 22:55:30 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-05-22 22:55:31 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d26969c9-62b2-3fd8-b1b0-86acb2e5b8e6
+2023-05-22 22:55:31 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-05-22 22:55:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-05-22 22:55:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:55:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-05-22 22:55:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 22:55:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 22:55:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:55:31 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:55:31 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-05-22 22:55:32 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+2023-05-22 22:55:32 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-22 22:55:32 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:27)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+	at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:749)
+	at java.base/java.util.Map.of(Map.java:1307)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig.adminClient(KafkaAdminConfig.java:23)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$3ae5b3ee.CGLIB$adminClient$0(<generated>)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$3ae5b3ee$$FastClassBySpringCGLIB$$4cbf5fca.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$3ae5b3ee.adminClient(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted
+2023-05-22 22:56:32 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.16 on localhost.localdomain with PID 10881 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-22 22:56:32 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - The following 1 profile is active: "twitter_to_kafka"
+2023-05-22 22:56:32 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-05-22 22:56:32 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=config-client-twitter_to_kafa, profiles=[twitter_to_kafka], label=null, version=d3d644e4ac9063ae46708e5a2f0e92133bf64938, state=null
+2023-05-22 22:56:33 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e2f5bef5-880a-334f-a9a0-3f31715da9a6
+2023-05-22 22:56:33 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-05-22 22:56:33 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-05-22 22:56:33 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:56:33 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-05-22 22:56:33 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 22:56:33 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 22:56:33 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:56:33 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configserver:git@github.com:XahedS/spring-cloud-config-server-repository.git/config-client-twitter_to_kafa.yml [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:56:33 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configClient [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:56:33 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 22:56:33 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-05-22 22:56:34 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver - Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2023-05-22 22:56:34 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector - Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2023-05-22 22:56:34 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-05-22 22:56:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.1.2
+2023-05-22 22:56:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f8c67dc3ae0a3265
+2023-05-22 22:56:34 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1684778194654
+2023-05-22 22:56:35 [main] INFO  o.s.b.a.s.r.ReactiveUserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 0fe926e7-14eb-4fb6-ad57-409b6a4c14f9
+
+2023-05-22 22:56:36 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2023-05-22 22:56:36 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2023-05-22 22:56:37 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2023-05-22 22:56:38 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2023-05-22 22:56:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 12.107 seconds (JVM running for 13.459)
+2023-05-22 22:56:39 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - App is started
+2023-05-22 22:56:39 [main] INFO  c.m.d.t.t.k.s.i.i.KafkaStreamInitializer - Topics with name twitter-topic is ready for operations !
+2023-05-22 22:56:39 [main] INFO  c.m.d.t.t.k.s.r.i.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2023-05-22 22:56:39 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum id elit varius tempus Java ipsum turpis dignissim sending to kafka topic twitter-topic
+2023-05-22 22:56:39 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5484151989731529737, "id": 341058993315123617, "text": "ipsum id elit varius tempus Java ipsum turpis dignissim", "createdAt": 1684778199000}' to topic='twitter-topic'
+2023-05-22 22:56:39 [pool-4-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2023-05-22 22:56:39 [pool-4-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2023-05-22 22:56:39 [pool-4-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-05-22 22:56:39 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.1.2
+2023-05-22 22:56:39 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f8c67dc3ae0a3265
+2023-05-22 22:56:39 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1684778199417
+2023-05-22 22:56:39 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: YgSOnTn1SGGysXelibqEnQ
+2023-05-22 22:56:39 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 33000 with epoch 0
+2023-05-22 22:56:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum venenatis turpis mauris varius in turpis Spring lectus venenatis varius lectus venenatis sending to kafka topic twitter-topic
+2023-05-22 22:56:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1214671168916615752, "id": 6264095111018094898, "text": "ipsum venenatis turpis mauris varius in turpis Spring lectus venenatis varius lectus venenatis", "createdAt": 1684778210000}' to topic='twitter-topic'
+2023-05-22 22:57:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text sit dignissim dolor venenatis id adipiscing tristique mauris Kafka dignissim adipiscing venenatis ultricies varius dolor ultricies sending to kafka topic twitter-topic
+2023-05-22 22:57:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7758805594005965281, "id": 6839341580800397914, "text": "sit dignissim dolor venenatis id adipiscing tristique mauris Kafka dignissim adipiscing venenatis ultricies varius dolor ultricies", "createdAt": 1684778220000}' to topic='twitter-topic'
+2023-05-22 22:57:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text in ipsum mauris Microservices ornare tempus sending to kafka topic twitter-topic
+2023-05-22 22:57:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6280630564515691020, "id": 1494189960064256688, "text": "in ipsum mauris Microservices ornare tempus", "createdAt": 1684778230000}' to topic='twitter-topic'
+2023-05-22 22:57:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis dolor ipsum dignissim Java consectetur dolor sending to kafka topic twitter-topic
+2023-05-22 22:57:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5887490197189381855, "id": 8337587789124956396, "text": "turpis dolor ipsum dignissim Java consectetur dolor", "createdAt": 1684778240000}' to topic='twitter-topic'
+2023-05-22 22:57:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text elit venenatis tempus tempus venenatis ipsum sit dolor Java lectus in in pharetra turpis consectetur sending to kafka topic twitter-topic
+2023-05-22 22:57:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4461236978743546677, "id": 715243060142342710, "text": "elit venenatis tempus tempus venenatis ipsum sit dolor Java lectus in in pharetra turpis consectetur", "createdAt": 1684778250000}' to topic='twitter-topic'
+2023-05-22 22:57:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut adipiscing sit sit ultricies dolor consectetur tristique Java tristique dignissim mauris dolor dignissim varius sit sending to kafka topic twitter-topic
+2023-05-22 22:57:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1020124454318363059, "id": 4269282259563672244, "text": "ut adipiscing sit sit ultricies dolor consectetur tristique Java tristique dignissim mauris dolor dignissim varius sit", "createdAt": 1684778260000}' to topic='twitter-topic'
+2023-05-22 22:57:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text lectus adipiscing ut in Elasticsearch elit pharetra mauris sending to kafka topic twitter-topic
+2023-05-22 22:57:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5217220481093916224, "id": 6292457992839714921, "text": "lectus adipiscing ut in Elasticsearch elit pharetra mauris", "createdAt": 1684778270000}' to topic='twitter-topic'
+2023-05-22 22:58:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text varius elit mauris in turpis dignissim Kafka pharetra pharetra ipsum ipsum id sending to kafka topic twitter-topic
+2023-05-22 22:58:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5865065211176854780, "id": 4382024570470962582, "text": "varius elit mauris in turpis dignissim Kafka pharetra pharetra ipsum ipsum id", "createdAt": 1684778280000}' to topic='twitter-topic'
+2023-05-22 22:58:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text elit turpis lectus ultricies pharetra sit elit adipiscing Elasticsearch ipsum mauris venenatis varius lectus tristique mauris sending to kafka topic twitter-topic
+2023-05-22 22:58:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8209865020650566439, "id": 908407449246982861, "text": "elit turpis lectus ultricies pharetra sit elit adipiscing Elasticsearch ipsum mauris venenatis varius lectus tristique mauris", "createdAt": 1684778290000}' to topic='twitter-topic'
+2023-05-22 22:58:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text varius id venenatis tempus dolor pharetra id consectetur Microservices ultricies in ornare ipsum tristique venenatis sending to kafka topic twitter-topic
+2023-05-22 22:58:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8857136617681085978, "id": 5426874681264092553, "text": "varius id venenatis tempus dolor pharetra id consectetur Microservices ultricies in ornare ipsum tristique venenatis", "createdAt": 1684778300000}' to topic='twitter-topic'
+2023-05-22 22:58:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare mauris sit Spring varius in sending to kafka topic twitter-topic
+2023-05-22 22:58:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 9165233918360105795, "id": 6433477580918313019, "text": "ornare mauris sit Spring varius in", "createdAt": 1684778310000}' to topic='twitter-topic'
+2023-05-22 22:58:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing elit turpis Spring tristique varius sending to kafka topic twitter-topic
+2023-05-22 22:58:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2551582004906534015, "id": 2022376507381256149, "text": "adipiscing elit turpis Spring tristique varius", "createdAt": 1684778320000}' to topic='twitter-topic'
+2023-05-22 22:58:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dolor venenatis ipsum consectetur Microservices venenatis ultricies sending to kafka topic twitter-topic
+2023-05-22 22:58:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 408286584088346729, "id": 8608125401799858670, "text": "dolor venenatis ipsum consectetur Microservices venenatis ultricies", "createdAt": 1684778330000}' to topic='twitter-topic'
+2023-05-22 22:59:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dolor ut ornare sit id sit in Java tristique adipiscing turpis sit ipsum sending to kafka topic twitter-topic
+2023-05-22 22:59:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8508621576971937105, "id": 1912973137153449531, "text": "dolor ut ornare sit id sit in Java tristique adipiscing turpis sit ipsum", "createdAt": 1684778340000}' to topic='twitter-topic'
+2023-05-22 22:59:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tempus dolor sit turpis tristique ornare Elasticsearch venenatis sit dolor mauris id sending to kafka topic twitter-topic
+2023-05-22 22:59:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 897411234834492867, "id": 3133459454989114769, "text": "tempus dolor sit turpis tristique ornare Elasticsearch venenatis sit dolor mauris id", "createdAt": 1684778350000}' to topic='twitter-topic'
+2023-05-22 22:59:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis turpis adipiscing lectus ultricies tristique lectus ut Microservices varius pharetra ultricies turpis varius ornare turpis sending to kafka topic twitter-topic
+2023-05-22 22:59:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4682229014157435362, "id": 4180645565713514447, "text": "turpis turpis adipiscing lectus ultricies tristique lectus ut Microservices varius pharetra ultricies turpis varius ornare turpis", "createdAt": 1684778360000}' to topic='twitter-topic'
+2023-05-22 22:59:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text varius tempus tristique tristique in sit tempus adipiscing Java ornare id pharetra tristique lectus id sending to kafka topic twitter-topic
+2023-05-22 22:59:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5322910346455053211, "id": 3463629643487988040, "text": "varius tempus tristique tristique in sit tempus adipiscing Java ornare id pharetra tristique lectus id", "createdAt": 1684778370000}' to topic='twitter-topic'
+2023-05-22 22:59:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text sit consectetur elit ultricies dignissim tempus sit dolor Spring ipsum venenatis pharetra sit id varius mauris sending to kafka topic twitter-topic
+2023-05-22 22:59:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2273980547301725728, "id": 7418389608733719920, "text": "sit consectetur elit ultricies dignissim tempus sit dolor Spring ipsum venenatis pharetra sit id varius mauris", "createdAt": 1684778380000}' to topic='twitter-topic'
+2023-05-22 22:59:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text sit id turpis dignissim ultricies Elasticsearch elit sit sit sending to kafka topic twitter-topic
+2023-05-22 22:59:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5221115626884632483, "id": 6308291858849727654, "text": "sit id turpis dignissim ultricies Elasticsearch elit sit sit", "createdAt": 1684778390000}' to topic='twitter-topic'
+2023-05-22 23:00:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text pharetra id ut lectus venenatis dolor sit Kafka elit ultricies lectus in mauris sending to kafka topic twitter-topic
+2023-05-22 23:00:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5462495074578016043, "id": 1347675621135208751, "text": "pharetra id ut lectus venenatis dolor sit Kafka elit ultricies lectus in mauris", "createdAt": 1684778400000}' to topic='twitter-topic'
+2023-05-22 23:00:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare in in in adipiscing dolor pharetra id Spring varius consectetur id varius lectus venenatis dignissim sending to kafka topic twitter-topic
+2023-05-22 23:00:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1426783105048460739, "id": 1894579181427905370, "text": "ornare in in in adipiscing dolor pharetra id Spring varius consectetur id varius lectus venenatis dignissim", "createdAt": 1684778410000}' to topic='twitter-topic'
+2023-05-22 23:00:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum turpis id mauris turpis pharetra Kafka mauris ultricies in ultricies sending to kafka topic twitter-topic
+2023-05-22 23:00:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2939342633304165357, "id": 2689237004890329551, "text": "ipsum turpis id mauris turpis pharetra Kafka mauris ultricies in ultricies", "createdAt": 1684778420000}' to topic='twitter-topic'
+2023-05-22 23:00:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tempus adipiscing ultricies tristique elit venenatis ornare mauris Kafka sit pharetra mauris venenatis adipiscing lectus venenatis sending to kafka topic twitter-topic
+2023-05-22 23:00:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 104817888430509034, "id": 6575771791907534741, "text": "tempus adipiscing ultricies tristique elit venenatis ornare mauris Kafka sit pharetra mauris venenatis adipiscing lectus venenatis", "createdAt": 1684778430000}' to topic='twitter-topic'
+2023-05-22 23:00:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text mauris venenatis varius ultricies in Elasticsearch ut venenatis tristique sending to kafka topic twitter-topic
+2023-05-22 23:00:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3730803926864954081, "id": 4414186424096162733, "text": "mauris venenatis varius ultricies in Elasticsearch ut venenatis tristique", "createdAt": 1684778440000}' to topic='twitter-topic'
+2023-05-22 23:00:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis ornare turpis elit consectetur tristique Java venenatis turpis tristique consectetur sending to kafka topic twitter-topic
+2023-05-22 23:00:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5815747654995594815, "id": 5908534898089768095, "text": "venenatis ornare turpis elit consectetur tristique Java venenatis turpis tristique consectetur", "createdAt": 1684778450000}' to topic='twitter-topic'
+2023-05-22 23:01:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut venenatis sit Elasticsearch consectetur mauris sending to kafka topic twitter-topic
+2023-05-22 23:01:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 833899287566155159, "id": 4524168528346504060, "text": "ut venenatis sit Elasticsearch consectetur mauris", "createdAt": 1684778460000}' to topic='twitter-topic'
+2023-05-22 23:01:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ultricies lectus tempus varius ultricies Elasticsearch turpis sit adipiscing consectetur sending to kafka topic twitter-topic
+2023-05-22 23:01:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5752045111383222402, "id": 5026194781575882070, "text": "ultricies lectus tempus varius ultricies Elasticsearch turpis sit adipiscing consectetur", "createdAt": 1684778470000}' to topic='twitter-topic'
+2023-05-22 23:01:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id ultricies tempus Elasticsearch pharetra dignissim sending to kafka topic twitter-topic
+2023-05-22 23:01:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6263028965233575253, "id": 2236081986731280147, "text": "id ultricies tempus Elasticsearch pharetra dignissim", "createdAt": 1684778480000}' to topic='twitter-topic'
+2023-05-22 23:01:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis ipsum id pharetra sit Elasticsearch ultricies venenatis venenatis elit sending to kafka topic twitter-topic
+2023-05-22 23:01:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4141782685743491721, "id": 8968658262779213242, "text": "venenatis ipsum id pharetra sit Elasticsearch ultricies venenatis venenatis elit", "createdAt": 1684778490000}' to topic='twitter-topic'
+2023-05-22 23:01:35 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2023-05-22 23:01:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut tristique ipsum Elasticsearch sit sit sending to kafka topic twitter-topic
+2023-05-22 23:01:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3843544649048782512, "id": 4331172077649132598, "text": "ut tristique ipsum Elasticsearch sit sit", "createdAt": 1684778500000}' to topic='twitter-topic'
+2023-05-22 23:01:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text sit sit elit Spring ipsum adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:01:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2908220117811417829, "id": 3472690599105997577, "text": "sit sit elit Spring ipsum adipiscing", "createdAt": 1684778510000}' to topic='twitter-topic'
+2023-05-22 23:02:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum lectus dignissim elit lectus Elasticsearch in tempus dignissim sending to kafka topic twitter-topic
+2023-05-22 23:02:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2459709994891334342, "id": 3913646716415395338, "text": "ipsum lectus dignissim elit lectus Elasticsearch in tempus dignissim", "createdAt": 1684778520000}' to topic='twitter-topic'
+2023-05-22 23:02:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis ornare dolor tristique in tempus Java consectetur sit mauris ornare sending to kafka topic twitter-topic
+2023-05-22 23:02:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7360295154573355823, "id": 5801270702705598963, "text": "venenatis ornare dolor tristique in tempus Java consectetur sit mauris ornare", "createdAt": 1684778530000}' to topic='twitter-topic'
+2023-05-22 23:02:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text sit dolor ut lectus dolor dolor turpis Kafka ornare dolor ut consectetur consectetur ornare sending to kafka topic twitter-topic
+2023-05-22 23:02:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5034516927414023866, "id": 8902187311934132348, "text": "sit dolor ut lectus dolor dolor turpis Kafka ornare dolor ut consectetur consectetur ornare", "createdAt": 1684778540000}' to topic='twitter-topic'
+2023-05-22 23:02:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text consectetur tristique elit tristique consectetur dolor Kafka lectus ornare venenatis tempus sending to kafka topic twitter-topic
+2023-05-22 23:02:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8468939166495196991, "id": 9008129947533063285, "text": "consectetur tristique elit tristique consectetur dolor Kafka lectus ornare venenatis tempus", "createdAt": 1684778550000}' to topic='twitter-topic'
+2023-05-22 23:02:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text varius adipiscing tempus id varius in lectus Elasticsearch varius dolor dolor elit id sending to kafka topic twitter-topic
+2023-05-22 23:02:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 254498873365739981, "id": 1515970033704552428, "text": "varius adipiscing tempus id varius in lectus Elasticsearch varius dolor dolor elit id", "createdAt": 1684778560000}' to topic='twitter-topic'
+2023-05-22 23:02:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis mauris ipsum dignissim adipiscing lectus ipsum elit Java id dignissim dolor elit ultricies tempus venenatis sending to kafka topic twitter-topic
+2023-05-22 23:02:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 494072402973817651, "id": 4107790244984848311, "text": "venenatis mauris ipsum dignissim adipiscing lectus ipsum elit Java id dignissim dolor elit ultricies tempus venenatis", "createdAt": 1684778570000}' to topic='twitter-topic'
+2023-05-22 23:03:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dolor lectus sit mauris Spring adipiscing consectetur sending to kafka topic twitter-topic
+2023-05-22 23:03:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6322554907941719335, "id": 745744280608474298, "text": "dolor lectus sit mauris Spring adipiscing consectetur", "createdAt": 1684778580000}' to topic='twitter-topic'
+2023-05-22 23:03:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text lectus venenatis consectetur Elasticsearch elit adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:03:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1743834635230023838, "id": 5085422903620495469, "text": "lectus venenatis consectetur Elasticsearch elit adipiscing", "createdAt": 1684778590000}' to topic='twitter-topic'
+2023-05-22 23:03:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text lectus ultricies lectus tempus dolor venenatis mauris Microservices id sit tristique varius pharetra dolor sending to kafka topic twitter-topic
+2023-05-22 23:03:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8655955149328125174, "id": 237776757211379524, "text": "lectus ultricies lectus tempus dolor venenatis mauris Microservices id sit tristique varius pharetra dolor", "createdAt": 1684778600000}' to topic='twitter-topic'
+2023-05-22 23:03:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare turpis pharetra lectus pharetra Kafka ultricies in adipiscing dolor sending to kafka topic twitter-topic
+2023-05-22 23:03:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2951314794526111776, "id": 5091551496986158260, "text": "ornare turpis pharetra lectus pharetra Kafka ultricies in adipiscing dolor", "createdAt": 1684778610000}' to topic='twitter-topic'
+2023-05-22 23:03:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text pharetra turpis adipiscing tempus dolor sit id Kafka turpis dignissim adipiscing sit dignissim sending to kafka topic twitter-topic
+2023-05-22 23:03:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8750736988314264836, "id": 643170030935685794, "text": "pharetra turpis adipiscing tempus dolor sit id Kafka turpis dignissim adipiscing sit dignissim", "createdAt": 1684778620000}' to topic='twitter-topic'
+2023-05-22 23:03:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis varius dignissim dolor tempus tempus in tristique Microservices ut mauris lectus pharetra tristique consectetur sending to kafka topic twitter-topic
+2023-05-22 23:03:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4473005920881473678, "id": 6558958845454782029, "text": "venenatis varius dignissim dolor tempus tempus in tristique Microservices ut mauris lectus pharetra tristique consectetur", "createdAt": 1684778630000}' to topic='twitter-topic'
+2023-05-22 23:04:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis adipiscing elit Elasticsearch ornare adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:04:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3479592853589766252, "id": 4071179170641400446, "text": "venenatis adipiscing elit Elasticsearch ornare adipiscing", "createdAt": 1684778640000}' to topic='twitter-topic'
+2023-05-22 23:04:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dignissim dignissim turpis tristique Microservices elit sit dolor sending to kafka topic twitter-topic
+2023-05-22 23:04:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6176582945658945942, "id": 5349883105368063564, "text": "dignissim dignissim turpis tristique Microservices elit sit dolor", "createdAt": 1684778650000}' to topic='twitter-topic'
+2023-05-22 23:04:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text in in tempus ipsum ut in ultricies Java lectus elit tempus id dolor in sending to kafka topic twitter-topic
+2023-05-22 23:04:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4545838272707788532, "id": 6987871264955507331, "text": "in in tempus ipsum ut in ultricies Java lectus elit tempus id dolor in", "createdAt": 1684778660000}' to topic='twitter-topic'
+2023-05-22 23:04:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dolor ornare dolor tempus pharetra Microservices turpis tempus ornare sending to kafka topic twitter-topic
+2023-05-22 23:04:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7899377161588716404, "id": 8239377459044999854, "text": "dolor ornare dolor tempus pharetra Microservices turpis tempus ornare", "createdAt": 1684778670000}' to topic='twitter-topic'
+2023-05-22 23:04:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis turpis tristique ultricies ut turpis Java dolor elit tristique ipsum sending to kafka topic twitter-topic
+2023-05-22 23:04:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 559280356599712165, "id": 1642451660960836651, "text": "turpis turpis tristique ultricies ut turpis Java dolor elit tristique ipsum", "createdAt": 1684778680000}' to topic='twitter-topic'
+2023-05-22 23:04:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dignissim id consectetur varius Elasticsearch id adipiscing dolor sending to kafka topic twitter-topic
+2023-05-22 23:04:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5619322573896205308, "id": 629766192081698297, "text": "dignissim id consectetur varius Elasticsearch id adipiscing dolor", "createdAt": 1684778690000}' to topic='twitter-topic'
+2023-05-22 23:05:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum mauris turpis dolor sit Spring tempus ut consectetur ut sending to kafka topic twitter-topic
+2023-05-22 23:05:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8065529230979681098, "id": 7041927389963524878, "text": "ipsum mauris turpis dolor sit Spring tempus ut consectetur ut", "createdAt": 1684778700000}' to topic='twitter-topic'
+2023-05-22 23:05:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare ultricies in id in elit Spring consectetur venenatis tempus tempus elit sending to kafka topic twitter-topic
+2023-05-22 23:05:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 910118509519841268, "id": 4791664189711924501, "text": "ornare ultricies in id in elit Spring consectetur venenatis tempus tempus elit", "createdAt": 1684778710000}' to topic='twitter-topic'
+2023-05-22 23:05:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis in tristique sit consectetur ornare venenatis dolor Microservices sit venenatis in varius dignissim pharetra adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:05:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4933257634466491056, "id": 6907131436027291849, "text": "turpis in tristique sit consectetur ornare venenatis dolor Microservices sit venenatis in varius dignissim pharetra adipiscing", "createdAt": 1684778720000}' to topic='twitter-topic'
+2023-05-22 23:05:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing consectetur consectetur dolor ultricies ipsum mauris ultricies Spring tristique tempus id dolor ipsum dignissim tristique sending to kafka topic twitter-topic
+2023-05-22 23:05:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4442211983193501794, "id": 178708808163415456, "text": "adipiscing consectetur consectetur dolor ultricies ipsum mauris ultricies Spring tristique tempus id dolor ipsum dignissim tristique", "createdAt": 1684778730000}' to topic='twitter-topic'
+2023-05-22 23:05:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text mauris dolor id dignissim mauris ornare Elasticsearch sit elit in elit sending to kafka topic twitter-topic
+2023-05-22 23:05:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3765799956482406035, "id": 818745265633542967, "text": "mauris dolor id dignissim mauris ornare Elasticsearch sit elit in elit", "createdAt": 1684778740000}' to topic='twitter-topic'
+2023-05-22 23:05:40 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2023-05-22 23:05:40 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -3 disconnected.
+2023-05-22 23:05:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique turpis id tempus pharetra elit Elasticsearch ut id turpis turpis pharetra sending to kafka topic twitter-topic
+2023-05-22 23:05:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3575390789767153062, "id": 8992065545689640407, "text": "tristique turpis id tempus pharetra elit Elasticsearch ut id turpis turpis pharetra", "createdAt": 1684778750000}' to topic='twitter-topic'
+2023-05-22 23:06:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id turpis dolor in sit consectetur id dignissim Kafka turpis tristique consectetur turpis id ornare consectetur sending to kafka topic twitter-topic
+2023-05-22 23:06:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8183011806040152153, "id": 4516090587218008409, "text": "id turpis dolor in sit consectetur id dignissim Kafka turpis tristique consectetur turpis id ornare consectetur", "createdAt": 1684778760000}' to topic='twitter-topic'
+2023-05-22 23:06:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text in dolor adipiscing varius ultricies dignissim dignissim sit Elasticsearch ut sit ipsum ipsum dignissim adipiscing ut sending to kafka topic twitter-topic
+2023-05-22 23:06:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6577343420094717092, "id": 4226564055932779587, "text": "in dolor adipiscing varius ultricies dignissim dignissim sit Elasticsearch ut sit ipsum ipsum dignissim adipiscing ut", "createdAt": 1684778770000}' to topic='twitter-topic'
+2023-05-22 23:06:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text elit pharetra dignissim mauris dignissim Spring venenatis pharetra sit mauris sending to kafka topic twitter-topic
+2023-05-22 23:06:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1289294891601256027, "id": 6577343260186927755, "text": "elit pharetra dignissim mauris dignissim Spring venenatis pharetra sit mauris", "createdAt": 1684778780000}' to topic='twitter-topic'
+2023-05-22 23:06:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing id tempus tristique sit ultricies id sit Elasticsearch pharetra dolor venenatis adipiscing pharetra varius sending to kafka topic twitter-topic
+2023-05-22 23:06:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4420445536691881753, "id": 993466189258123150, "text": "adipiscing id tempus tristique sit ultricies id sit Elasticsearch pharetra dolor venenatis adipiscing pharetra varius", "createdAt": 1684778790000}' to topic='twitter-topic'
+2023-05-22 23:06:35 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node 3 disconnected.
+2023-05-22 23:06:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing adipiscing ipsum dignissim in venenatis lectus Elasticsearch turpis ultricies tristique ipsum ipsum sending to kafka topic twitter-topic
+2023-05-22 23:06:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7352665033378419522, "id": 7668341089947957156, "text": "adipiscing adipiscing ipsum dignissim in venenatis lectus Elasticsearch turpis ultricies tristique ipsum ipsum", "createdAt": 1684778800000}' to topic='twitter-topic'
+2023-05-22 23:06:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text elit ultricies tristique in sit ut consectetur dignissim Microservices ipsum ornare pharetra mauris elit dignissim sit sending to kafka topic twitter-topic
+2023-05-22 23:06:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4721333899146002727, "id": 3661947167386065870, "text": "elit ultricies tristique in sit ut consectetur dignissim Microservices ipsum ornare pharetra mauris elit dignissim sit", "createdAt": 1684778810000}' to topic='twitter-topic'
+2023-05-22 23:07:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut id ipsum mauris Microservices tempus turpis sending to kafka topic twitter-topic
+2023-05-22 23:07:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3767023108017983343, "id": 5693384354368029067, "text": "ut id ipsum mauris Microservices tempus turpis", "createdAt": 1684778820000}' to topic='twitter-topic'
+2023-05-22 23:07:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text varius elit dolor sit adipiscing varius tempus Spring venenatis dignissim elit ut adipiscing in sending to kafka topic twitter-topic
+2023-05-22 23:07:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4548660731849047829, "id": 5339143536079447983, "text": "varius elit dolor sit adipiscing varius tempus Spring venenatis dignissim elit ut adipiscing in", "createdAt": 1684778830000}' to topic='twitter-topic'
+2023-05-22 23:07:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum in ornare venenatis tristique consectetur elit ut Spring varius ultricies adipiscing ut id lectus sending to kafka topic twitter-topic
+2023-05-22 23:07:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7721442190562370296, "id": 204195276465578627, "text": "ipsum in ornare venenatis tristique consectetur elit ut Spring varius ultricies adipiscing ut id lectus", "createdAt": 1684778840000}' to topic='twitter-topic'
+2023-05-22 23:07:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique varius dignissim venenatis turpis consectetur Microservices consectetur pharetra lectus id sending to kafka topic twitter-topic
+2023-05-22 23:07:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 190046108218817317, "id": 845130520933240597, "text": "tristique varius dignissim venenatis turpis consectetur Microservices consectetur pharetra lectus id", "createdAt": 1684778850000}' to topic='twitter-topic'
+2023-05-22 23:07:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut ornare tempus ut turpis Spring turpis varius tempus sending to kafka topic twitter-topic
+2023-05-22 23:07:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3323033473270611409, "id": 6630013384184518773, "text": "ut ornare tempus ut turpis Spring turpis varius tempus", "createdAt": 1684778860000}' to topic='twitter-topic'
+2023-05-22 23:07:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id elit ut elit ut venenatis dignissim sit Microservices ipsum mauris consectetur sit dignissim dignissim sending to kafka topic twitter-topic
+2023-05-22 23:07:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5248203384812081856, "id": 6876353333045334003, "text": "id elit ut elit ut venenatis dignissim sit Microservices ipsum mauris consectetur sit dignissim dignissim", "createdAt": 1684778870000}' to topic='twitter-topic'
+2023-05-22 23:08:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text elit adipiscing turpis mauris tristique tempus venenatis venenatis Microservices dolor tempus ut dolor consectetur tristique tempus sending to kafka topic twitter-topic
+2023-05-22 23:08:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2222697205247073491, "id": 8542356461004609051, "text": "elit adipiscing turpis mauris tristique tempus venenatis venenatis Microservices dolor tempus ut dolor consectetur tristique tempus", "createdAt": 1684778880000}' to topic='twitter-topic'
+2023-05-22 23:08:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut ipsum sit dolor dignissim elit Kafka mauris dignissim in in id sending to kafka topic twitter-topic
+2023-05-22 23:08:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1719074899629369433, "id": 7496046801240523392, "text": "ut ipsum sit dolor dignissim elit Kafka mauris dignissim in in id", "createdAt": 1684778890000}' to topic='twitter-topic'
+2023-05-22 23:08:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text sit elit tristique ornare dignissim mauris pharetra tempus Microservices consectetur ipsum turpis lectus adipiscing ut sending to kafka topic twitter-topic
+2023-05-22 23:08:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5044561948334361296, "id": 5655301292826072397, "text": "sit elit tristique ornare dignissim mauris pharetra tempus Microservices consectetur ipsum turpis lectus adipiscing ut", "createdAt": 1684778900000}' to topic='twitter-topic'
+2023-05-22 23:08:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id sit in lectus in elit ut tempus Kafka turpis mauris turpis ultricies dolor mauris ut sending to kafka topic twitter-topic
+2023-05-22 23:08:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 830234939321412147, "id": 9210653414597425487, "text": "id sit in lectus in elit ut tempus Kafka turpis mauris turpis ultricies dolor mauris ut", "createdAt": 1684778910000}' to topic='twitter-topic'
+2023-05-22 23:08:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis dolor pharetra pharetra varius Microservices venenatis tempus elit dignissim sending to kafka topic twitter-topic
+2023-05-22 23:08:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1051081382290353066, "id": 1810429223283924199, "text": "venenatis dolor pharetra pharetra varius Microservices venenatis tempus elit dignissim", "createdAt": 1684778920000}' to topic='twitter-topic'
+2023-05-22 23:08:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis id ut Kafka venenatis varius sending to kafka topic twitter-topic
+2023-05-22 23:08:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 728264667176984768, "id": 1838662880746154816, "text": "turpis id ut Kafka venenatis varius", "createdAt": 1684778930000}' to topic='twitter-topic'
+2023-05-22 23:09:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique adipiscing ultricies dolor Java adipiscing pharetra varius sending to kafka topic twitter-topic
+2023-05-22 23:09:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6730047435028048062, "id": 8877952411277189354, "text": "tristique adipiscing ultricies dolor Java adipiscing pharetra varius", "createdAt": 1684778940000}' to topic='twitter-topic'
+2023-05-22 23:09:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique id adipiscing Kafka lectus pharetra sending to kafka topic twitter-topic
+2023-05-22 23:09:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6462290648997270597, "id": 8749787120756430618, "text": "tristique id adipiscing Kafka lectus pharetra", "createdAt": 1684778950000}' to topic='twitter-topic'
+2023-05-22 23:09:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing sit sit turpis in ornare Java in ultricies id ut dolor sending to kafka topic twitter-topic
+2023-05-22 23:09:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2917098246301162247, "id": 7863320506026128686, "text": "adipiscing sit sit turpis in ornare Java in ultricies id ut dolor", "createdAt": 1684778960000}' to topic='twitter-topic'
+2023-05-22 23:09:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis tempus ut Kafka adipiscing id sending to kafka topic twitter-topic
+2023-05-22 23:09:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7596543753928908604, "id": 1483886063670813326, "text": "turpis tempus ut Kafka adipiscing id", "createdAt": 1684778970000}' to topic='twitter-topic'
+2023-05-22 23:09:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis ultricies id ultricies tempus tempus Elasticsearch ipsum lectus pharetra dolor sending to kafka topic twitter-topic
+2023-05-22 23:09:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8497155748813498599, "id": 2805277993136250796, "text": "turpis ultricies id ultricies tempus tempus Elasticsearch ipsum lectus pharetra dolor", "createdAt": 1684778980000}' to topic='twitter-topic'
+2023-05-22 23:09:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dignissim elit venenatis elit id consectetur consectetur Spring ornare tempus consectetur in venenatis adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:09:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3634901046316722436, "id": 1965833389760605891, "text": "dignissim elit venenatis elit id consectetur consectetur Spring ornare tempus consectetur in venenatis adipiscing", "createdAt": 1684778990000}' to topic='twitter-topic'
+2023-05-22 23:10:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum dolor mauris tempus venenatis Java dignissim ornare ultricies venenatis sending to kafka topic twitter-topic
+2023-05-22 23:10:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 9207585970518789883, "id": 3577731443037789590, "text": "ipsum dolor mauris tempus venenatis Java dignissim ornare ultricies venenatis", "createdAt": 1684779000000}' to topic='twitter-topic'
+2023-05-22 23:10:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id in sit tempus turpis id ut pharetra Elasticsearch varius mauris ornare ipsum sit ut sending to kafka topic twitter-topic
+2023-05-22 23:10:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6135931481543543399, "id": 5162467886982024649, "text": "id in sit tempus turpis id ut pharetra Elasticsearch varius mauris ornare ipsum sit ut", "createdAt": 1684779010000}' to topic='twitter-topic'
+2023-05-22 23:10:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare adipiscing sit dolor tempus Spring consectetur consectetur turpis sending to kafka topic twitter-topic
+2023-05-22 23:10:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7643611702163272876, "id": 6946363543409962753, "text": "ornare adipiscing sit dolor tempus Spring consectetur consectetur turpis", "createdAt": 1684779020000}' to topic='twitter-topic'
+2023-05-22 23:10:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ultricies sit mauris dignissim Spring turpis turpis ut sending to kafka topic twitter-topic
+2023-05-22 23:10:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2782470660223230055, "id": 385819368951918249, "text": "ultricies sit mauris dignissim Spring turpis turpis ut", "createdAt": 1684779030000}' to topic='twitter-topic'
+2023-05-22 23:10:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text elit id adipiscing varius tristique Java consectetur sit ultricies sending to kafka topic twitter-topic
+2023-05-22 23:10:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6115679760856887910, "id": 4169012508362733277, "text": "elit id adipiscing varius tristique Java consectetur sit ultricies", "createdAt": 1684779040000}' to topic='twitter-topic'
+2023-05-22 23:10:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut elit mauris ornare Spring consectetur tempus sending to kafka topic twitter-topic
+2023-05-22 23:10:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1669241062438761997, "id": 1755661357349760903, "text": "ut elit mauris ornare Spring consectetur tempus", "createdAt": 1684779050000}' to topic='twitter-topic'
+2023-05-22 23:11:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique ut tempus id pharetra lectus sit Spring id tempus turpis ut pharetra turpis sending to kafka topic twitter-topic
+2023-05-22 23:11:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1201772328947832818, "id": 8405510047495236825, "text": "tristique ut tempus id pharetra lectus sit Spring id tempus turpis ut pharetra turpis", "createdAt": 1684779060000}' to topic='twitter-topic'
+2023-05-22 23:11:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dignissim ultricies tristique ipsum ornare Elasticsearch consectetur pharetra ipsum sending to kafka topic twitter-topic
+2023-05-22 23:11:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3525153012937811090, "id": 3284565028309370093, "text": "dignissim ultricies tristique ipsum ornare Elasticsearch consectetur pharetra ipsum", "createdAt": 1684779070000}' to topic='twitter-topic'
+2023-05-22 23:11:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text lectus in ipsum in sit varius Microservices venenatis tristique ut varius in sending to kafka topic twitter-topic
+2023-05-22 23:11:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1023995465546305444, "id": 6155913651928037177, "text": "lectus in ipsum in sit varius Microservices venenatis tristique ut varius in", "createdAt": 1684779080000}' to topic='twitter-topic'
+2023-05-22 23:11:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id id ut tristique tempus Microservices consectetur sit ipsum pharetra sending to kafka topic twitter-topic
+2023-05-22 23:11:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 9090107279641766150, "id": 707315529029725128, "text": "id id ut tristique tempus Microservices consectetur sit ipsum pharetra", "createdAt": 1684779090000}' to topic='twitter-topic'
+2023-05-22 23:11:35 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node 2 disconnected.
+2023-05-22 23:11:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text varius ornare elit adipiscing ornare Java venenatis ut adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:11:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7382594134570378369, "id": 2326038043742289720, "text": "varius ornare elit adipiscing ornare Java venenatis ut adipiscing", "createdAt": 1684779100000}' to topic='twitter-topic'
+2023-05-22 23:11:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tempus varius consectetur ipsum ipsum sit Kafka venenatis ornare venenatis adipiscing venenatis sending to kafka topic twitter-topic
+2023-05-22 23:11:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4988485012155118555, "id": 6299650893541926662, "text": "tempus varius consectetur ipsum ipsum sit Kafka venenatis ornare venenatis adipiscing venenatis", "createdAt": 1684779110000}' to topic='twitter-topic'
+2023-05-22 23:12:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing ornare pharetra id Spring ipsum adipiscing dignissim sending to kafka topic twitter-topic
+2023-05-22 23:12:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5976922581336647417, "id": 2258766615693686771, "text": "adipiscing ornare pharetra id Spring ipsum adipiscing dignissim", "createdAt": 1684779120000}' to topic='twitter-topic'
+2023-05-22 23:12:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dolor varius id in varius consectetur Spring tristique dignissim mauris ipsum sending to kafka topic twitter-topic
+2023-05-22 23:12:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1222426204667265504, "id": 5169608639925601031, "text": "dolor varius id in varius consectetur Spring tristique dignissim mauris ipsum", "createdAt": 1684779130000}' to topic='twitter-topic'
+2023-05-22 23:12:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text pharetra varius mauris sit turpis venenatis pharetra tristique Elasticsearch elit consectetur ornare dignissim varius elit lectus sending to kafka topic twitter-topic
+2023-05-22 23:12:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1440973739074395655, "id": 7383054296722021504, "text": "pharetra varius mauris sit turpis venenatis pharetra tristique Elasticsearch elit consectetur ornare dignissim varius elit lectus", "createdAt": 1684779140000}' to topic='twitter-topic'
+2023-05-22 23:12:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique ipsum tristique tempus elit id ipsum venenatis Elasticsearch sit ornare dignissim lectus varius elit sending to kafka topic twitter-topic
+2023-05-22 23:12:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1195392307812117074, "id": 5625347429174862680, "text": "tristique ipsum tristique tempus elit id ipsum venenatis Elasticsearch sit ornare dignissim lectus varius elit", "createdAt": 1684779150000}' to topic='twitter-topic'
+2023-05-22 23:12:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare dignissim varius ut Kafka sit elit sending to kafka topic twitter-topic
+2023-05-22 23:12:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 424853195204455018, "id": 9201852541393454818, "text": "ornare dignissim varius ut Kafka sit elit", "createdAt": 1684779160000}' to topic='twitter-topic'
+2023-05-22 23:12:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum ultricies tempus Kafka dignissim adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:12:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6809673696585774117, "id": 3290641940839285218, "text": "ipsum ultricies tempus Kafka dignissim adipiscing", "createdAt": 1684779170000}' to topic='twitter-topic'
+2023-05-22 23:13:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dolor varius ultricies id mauris dolor id consectetur Java in sit id ipsum id id lectus sending to kafka topic twitter-topic
+2023-05-22 23:13:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7035715673108224658, "id": 2097772157657769640, "text": "dolor varius ultricies id mauris dolor id consectetur Java in sit id ipsum id id lectus", "createdAt": 1684779180000}' to topic='twitter-topic'
+2023-05-22 23:13:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text sit ultricies pharetra in consectetur ut pharetra Microservices dignissim pharetra tristique ut id mauris sending to kafka topic twitter-topic
+2023-05-22 23:13:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5765558766220405649, "id": 2438354087279780824, "text": "sit ultricies pharetra in consectetur ut pharetra Microservices dignissim pharetra tristique ut id mauris", "createdAt": 1684779190000}' to topic='twitter-topic'
+2023-05-22 23:13:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text consectetur ornare dignissim Spring ut venenatis sending to kafka topic twitter-topic
+2023-05-22 23:13:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8985884228876841960, "id": 5449959069082537957, "text": "consectetur ornare dignissim Spring ut venenatis", "createdAt": 1684779200000}' to topic='twitter-topic'
+2023-05-22 23:13:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut sit ornare ut dolor varius dignissim ornare Kafka varius id ornare tempus ipsum varius id sending to kafka topic twitter-topic
+2023-05-22 23:13:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1624641497882344753, "id": 3268993056626008952, "text": "ut sit ornare ut dolor varius dignissim ornare Kafka varius id ornare tempus ipsum varius id", "createdAt": 1684779210000}' to topic='twitter-topic'
+2023-05-22 23:13:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text in ut ornare ultricies lectus tristique pharetra venenatis Elasticsearch tempus sit elit sit sit varius sending to kafka topic twitter-topic
+2023-05-22 23:13:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3747841795974400687, "id": 4056388259985095683, "text": "in ut ornare ultricies lectus tristique pharetra venenatis Elasticsearch tempus sit elit sit sit varius", "createdAt": 1684779220000}' to topic='twitter-topic'
+2023-05-22 23:13:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique venenatis in ultricies mauris consectetur lectus Elasticsearch dignissim adipiscing ut elit mauris id sending to kafka topic twitter-topic
+2023-05-22 23:13:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1163594938628352458, "id": 4245621032431506243, "text": "tristique venenatis in ultricies mauris consectetur lectus Elasticsearch dignissim adipiscing ut elit mauris id", "createdAt": 1684779230000}' to topic='twitter-topic'
+2023-05-22 23:14:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text pharetra varius ipsum turpis tempus dignissim elit Spring id tempus mauris sit dolor in sending to kafka topic twitter-topic
+2023-05-22 23:14:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6095521746454895932, "id": 315484159803818418, "text": "pharetra varius ipsum turpis tempus dignissim elit Spring id tempus mauris sit dolor in", "createdAt": 1684779240000}' to topic='twitter-topic'
+2023-05-22 23:14:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum elit tristique id ut Kafka varius ultricies consectetur sending to kafka topic twitter-topic
+2023-05-22 23:14:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5520011322139071057, "id": 9116300675420025598, "text": "ipsum elit tristique id ut Kafka varius ultricies consectetur", "createdAt": 1684779250000}' to topic='twitter-topic'
+2023-05-22 23:14:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique elit ultricies pharetra adipiscing id Elasticsearch tempus pharetra ut venenatis sending to kafka topic twitter-topic
+2023-05-22 23:14:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6654779068009513254, "id": 799980874082833813, "text": "tristique elit ultricies pharetra adipiscing id Elasticsearch tempus pharetra ut venenatis", "createdAt": 1684779260000}' to topic='twitter-topic'
+2023-05-22 23:14:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text lectus mauris mauris lectus id varius tristique Kafka venenatis elit varius ipsum consectetur sending to kafka topic twitter-topic
+2023-05-22 23:14:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2011835451751850149, "id": 6133350163851058173, "text": "lectus mauris mauris lectus id varius tristique Kafka venenatis elit varius ipsum consectetur", "createdAt": 1684779270000}' to topic='twitter-topic'
+2023-05-22 23:14:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text mauris dolor sit pharetra dignissim Spring lectus lectus adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:14:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6949250803057020475, "id": 2667937491494288601, "text": "mauris dolor sit pharetra dignissim Spring lectus lectus adipiscing", "createdAt": 1684779280000}' to topic='twitter-topic'
+2023-05-22 23:14:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dolor adipiscing dolor ut tempus dignissim Java ipsum in dolor adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:14:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4694243664607099648, "id": 8324768559951870667, "text": "dolor adipiscing dolor ut tempus dignissim Java ipsum in dolor adipiscing", "createdAt": 1684779290000}' to topic='twitter-topic'
+2023-05-22 23:15:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text pharetra consectetur ut tempus Microservices turpis elit sending to kafka topic twitter-topic
+2023-05-22 23:15:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7815712619035539089, "id": 7899198390344987429, "text": "pharetra consectetur ut tempus Microservices turpis elit", "createdAt": 1684779300000}' to topic='twitter-topic'
+2023-05-22 23:15:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text varius lectus tristique consectetur ornare mauris venenatis Kafka mauris id venenatis pharetra ultricies sending to kafka topic twitter-topic
+2023-05-22 23:15:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3306020635600238391, "id": 8015136933940649889, "text": "varius lectus tristique consectetur ornare mauris venenatis Kafka mauris id venenatis pharetra ultricies", "createdAt": 1684779310000}' to topic='twitter-topic'
+2023-05-22 23:15:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text consectetur adipiscing sit varius adipiscing in Kafka in id dignissim ultricies turpis sending to kafka topic twitter-topic
+2023-05-22 23:15:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1190351567762231236, "id": 5898427179780856889, "text": "consectetur adipiscing sit varius adipiscing in Kafka in id dignissim ultricies turpis", "createdAt": 1684779320000}' to topic='twitter-topic'
+2023-05-22 23:15:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis id ipsum lectus tempus venenatis ipsum Java adipiscing tristique ut adipiscing sit mauris sending to kafka topic twitter-topic
+2023-05-22 23:15:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 571269412403594497, "id": 3499275192772940702, "text": "venenatis id ipsum lectus tempus venenatis ipsum Java adipiscing tristique ut adipiscing sit mauris", "createdAt": 1684779330000}' to topic='twitter-topic'
+2023-05-22 23:15:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare varius turpis lectus mauris Microservices lectus venenatis ultricies sending to kafka topic twitter-topic
+2023-05-22 23:15:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 162525327988731579, "id": 3755973711283847197, "text": "ornare varius turpis lectus mauris Microservices lectus venenatis ultricies", "createdAt": 1684779340000}' to topic='twitter-topic'
+2023-05-22 23:15:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing mauris varius Spring adipiscing ornare sending to kafka topic twitter-topic
+2023-05-22 23:15:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5906001820293166834, "id": 1212305996769972418, "text": "adipiscing mauris varius Spring adipiscing ornare", "createdAt": 1684779350000}' to topic='twitter-topic'
+2023-05-22 23:16:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique venenatis tempus pharetra consectetur Elasticsearch dignissim elit adipiscing ultricies sending to kafka topic twitter-topic
+2023-05-22 23:16:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4463903867297077540, "id": 425316786835046849, "text": "tristique venenatis tempus pharetra consectetur Elasticsearch dignissim elit adipiscing ultricies", "createdAt": 1684779360000}' to topic='twitter-topic'
+2023-05-22 23:16:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text in turpis tristique turpis dolor in Microservices lectus lectus adipiscing in sending to kafka topic twitter-topic
+2023-05-22 23:16:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8563629003132523724, "id": 6962240567864374397, "text": "in turpis tristique turpis dolor in Microservices lectus lectus adipiscing in", "createdAt": 1684779370000}' to topic='twitter-topic'
+2023-05-22 23:16:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text varius in elit pharetra venenatis adipiscing venenatis Elasticsearch ultricies id varius pharetra dignissim sending to kafka topic twitter-topic
+2023-05-22 23:16:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8818549671852852096, "id": 4006780939316613171, "text": "varius in elit pharetra venenatis adipiscing venenatis Elasticsearch ultricies id varius pharetra dignissim", "createdAt": 1684779380000}' to topic='twitter-topic'
+2023-05-22 23:16:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing mauris id Spring consectetur dignissim sending to kafka topic twitter-topic
+2023-05-22 23:16:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6344220737651679788, "id": 2403855495172378071, "text": "adipiscing mauris id Spring consectetur dignissim", "createdAt": 1684779390000}' to topic='twitter-topic'
+2023-05-22 23:16:35 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node 1 disconnected.
+2023-05-22 23:16:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum ut adipiscing dignissim lectus id adipiscing Spring ultricies dolor dignissim tempus varius sending to kafka topic twitter-topic
+2023-05-22 23:16:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4832676715481805555, "id": 661016769878946220, "text": "ipsum ut adipiscing dignissim lectus id adipiscing Spring ultricies dolor dignissim tempus varius", "createdAt": 1684779400000}' to topic='twitter-topic'
+2023-05-22 23:16:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis id varius varius Microservices ultricies turpis sending to kafka topic twitter-topic
+2023-05-22 23:16:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2784846699742328521, "id": 2472038375923034811, "text": "turpis id varius varius Microservices ultricies turpis", "createdAt": 1684779410000}' to topic='twitter-topic'
+2023-05-22 23:17:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text in pharetra ultricies tristique in venenatis Spring dolor id adipiscing consectetur dolor sending to kafka topic twitter-topic
+2023-05-22 23:17:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5787676155042704608, "id": 8853674051709912283, "text": "in pharetra ultricies tristique in venenatis Spring dolor id adipiscing consectetur dolor", "createdAt": 1684779420000}' to topic='twitter-topic'
+2023-05-22 23:17:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tempus venenatis ornare tristique sit turpis Java sit venenatis id lectus sending to kafka topic twitter-topic
+2023-05-22 23:17:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2887780650964924495, "id": 6444728205885430044, "text": "tempus venenatis ornare tristique sit turpis Java sit venenatis id lectus", "createdAt": 1684779430000}' to topic='twitter-topic'
+2023-05-22 23:17:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id ut venenatis sit ultricies dolor venenatis Microservices sit venenatis lectus consectetur ut sit sending to kafka topic twitter-topic
+2023-05-22 23:17:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8528954490045592949, "id": 2943279186474332668, "text": "id ut venenatis sit ultricies dolor venenatis Microservices sit venenatis lectus consectetur ut sit", "createdAt": 1684779440000}' to topic='twitter-topic'
+2023-05-22 23:17:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ultricies ut consectetur consectetur dolor ipsum Microservices tristique venenatis tristique ultricies ultricies sending to kafka topic twitter-topic
+2023-05-22 23:17:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6252753680231514412, "id": 5325614726731288513, "text": "ultricies ut consectetur consectetur dolor ipsum Microservices tristique venenatis tristique ultricies ultricies", "createdAt": 1684779450000}' to topic='twitter-topic'
+2023-05-22 23:17:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis dignissim sit ornare ornare Kafka ipsum adipiscing ornare adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:17:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7651252511111433864, "id": 6230698597710260317, "text": "turpis dignissim sit ornare ornare Kafka ipsum adipiscing ornare adipiscing", "createdAt": 1684779460000}' to topic='twitter-topic'
+2023-05-22 23:17:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text consectetur id lectus mauris tristique ultricies Elasticsearch dolor sit ultricies turpis tempus sending to kafka topic twitter-topic
+2023-05-22 23:17:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5661905579491099854, "id": 2010414599164927508, "text": "consectetur id lectus mauris tristique ultricies Elasticsearch dolor sit ultricies turpis tempus", "createdAt": 1684779470000}' to topic='twitter-topic'
+2023-05-22 23:18:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dignissim sit adipiscing in elit Kafka elit turpis varius sending to kafka topic twitter-topic
+2023-05-22 23:18:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3997746161678583596, "id": 2096008514803931006, "text": "dignissim sit adipiscing in elit Kafka elit turpis varius", "createdAt": 1684779480000}' to topic='twitter-topic'
+2023-05-22 23:18:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dignissim adipiscing dolor adipiscing Java ut venenatis ornare sending to kafka topic twitter-topic
+2023-05-22 23:18:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3318254409004710213, "id": 278601000470435612, "text": "dignissim adipiscing dolor adipiscing Java ut venenatis ornare", "createdAt": 1684779490000}' to topic='twitter-topic'
+2023-05-22 23:18:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text varius mauris venenatis ut lectus Microservices ornare dolor ut pharetra sending to kafka topic twitter-topic
+2023-05-22 23:18:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7260811557996792193, "id": 2360883211230897599, "text": "varius mauris venenatis ut lectus Microservices ornare dolor ut pharetra", "createdAt": 1684779500000}' to topic='twitter-topic'
+2023-05-22 23:18:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dignissim lectus tempus dignissim Microservices adipiscing lectus sending to kafka topic twitter-topic
+2023-05-22 23:18:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3075108761316064302, "id": 1273189359194922193, "text": "dignissim lectus tempus dignissim Microservices adipiscing lectus", "createdAt": 1684779510000}' to topic='twitter-topic'
+2023-05-22 23:18:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dignissim ipsum consectetur id tempus ut tristique Spring turpis venenatis ornare lectus dolor lectus sending to kafka topic twitter-topic
+2023-05-22 23:18:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 976401069794786456, "id": 1700615551465419938, "text": "dignissim ipsum consectetur id tempus ut tristique Spring turpis venenatis ornare lectus dolor lectus", "createdAt": 1684779520000}' to topic='twitter-topic'
+2023-05-22 23:18:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing mauris ut turpis varius turpis elit Microservices ut in consectetur ipsum pharetra id sending to kafka topic twitter-topic
+2023-05-22 23:18:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3829602522652576736, "id": 7646416494236315737, "text": "adipiscing mauris ut turpis varius turpis elit Microservices ut in consectetur ipsum pharetra id", "createdAt": 1684779530000}' to topic='twitter-topic'
+2023-05-22 23:19:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tempus varius tempus id tempus sit Spring venenatis consectetur pharetra dignissim ornare sending to kafka topic twitter-topic
+2023-05-22 23:19:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7495236715603092731, "id": 5372675700078317324, "text": "tempus varius tempus id tempus sit Spring venenatis consectetur pharetra dignissim ornare", "createdAt": 1684779540000}' to topic='twitter-topic'
+2023-05-22 23:19:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text mauris tristique lectus mauris dignissim dignissim Java mauris dignissim dignissim dignissim venenatis sending to kafka topic twitter-topic
+2023-05-22 23:19:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2320828340508239090, "id": 7378739599064048487, "text": "mauris tristique lectus mauris dignissim dignissim Java mauris dignissim dignissim dignissim venenatis", "createdAt": 1684779550000}' to topic='twitter-topic'
+2023-05-22 23:19:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing elit pharetra pharetra id in ornare Microservices venenatis ipsum ornare dignissim turpis sending to kafka topic twitter-topic
+2023-05-22 23:19:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7307455803547078220, "id": 3687455142513820519, "text": "adipiscing elit pharetra pharetra id in ornare Microservices venenatis ipsum ornare dignissim turpis", "createdAt": 1684779560000}' to topic='twitter-topic'
+2023-05-22 23:19:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tempus adipiscing in sit elit Elasticsearch id dolor ut adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:19:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 18953064591035982, "id": 1276293224410734011, "text": "tempus adipiscing in sit elit Elasticsearch id dolor ut adipiscing", "createdAt": 1684779570000}' to topic='twitter-topic'
+2023-05-22 23:19:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tristique consectetur ut adipiscing pharetra tristique ut lectus Java dolor sit tristique id ut ultricies sending to kafka topic twitter-topic
+2023-05-22 23:19:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3720370430601321722, "id": 7312149639673662937, "text": "tristique consectetur ut adipiscing pharetra tristique ut lectus Java dolor sit tristique id ut ultricies", "createdAt": 1684779580000}' to topic='twitter-topic'
+2023-05-22 23:19:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis tristique turpis sit tempus ipsum adipiscing Elasticsearch ultricies ut turpis varius adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:19:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3346426600435517310, "id": 2416357558937332503, "text": "turpis tristique turpis sit tempus ipsum adipiscing Elasticsearch ultricies ut turpis varius adipiscing", "createdAt": 1684779590000}' to topic='twitter-topic'
+2023-05-22 23:20:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text elit id consectetur dolor pharetra adipiscing Elasticsearch tempus adipiscing adipiscing ultricies ipsum sending to kafka topic twitter-topic
+2023-05-22 23:20:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8272504788355745867, "id": 1019224345805159377, "text": "elit id consectetur dolor pharetra adipiscing Elasticsearch tempus adipiscing adipiscing ultricies ipsum", "createdAt": 1684779600000}' to topic='twitter-topic'
+2023-05-22 23:20:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ipsum in ultricies lectus id lectus venenatis Kafka elit ultricies turpis adipiscing dolor turpis sending to kafka topic twitter-topic
+2023-05-22 23:20:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1299733889663412382, "id": 2510671888839848253, "text": "ipsum in ultricies lectus id lectus venenatis Kafka elit ultricies turpis adipiscing dolor turpis", "createdAt": 1684779610000}' to topic='twitter-topic'
+2023-05-22 23:20:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing lectus sit tristique Java dolor ultricies sending to kafka topic twitter-topic
+2023-05-22 23:20:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7892116543667786820, "id": 3818751062112028588, "text": "adipiscing lectus sit tristique Java dolor ultricies", "createdAt": 1684779620000}' to topic='twitter-topic'
+2023-05-22 23:20:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis venenatis elit Microservices venenatis in sending to kafka topic twitter-topic
+2023-05-22 23:20:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3084524797521249894, "id": 4866952054706322527, "text": "venenatis venenatis elit Microservices venenatis in", "createdAt": 1684779630000}' to topic='twitter-topic'
+2023-05-22 23:20:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis venenatis ornare lectus lectus sit venenatis Elasticsearch pharetra adipiscing venenatis id pharetra varius sending to kafka topic twitter-topic
+2023-05-22 23:20:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5254931927382900539, "id": 2476808963928902043, "text": "turpis venenatis ornare lectus lectus sit venenatis Elasticsearch pharetra adipiscing venenatis id pharetra varius", "createdAt": 1684779640000}' to topic='twitter-topic'
+2023-05-22 23:20:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare lectus tristique turpis mauris Spring ipsum venenatis tempus consectetur sending to kafka topic twitter-topic
+2023-05-22 23:20:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8445237886623838328, "id": 4791703082348503618, "text": "ornare lectus tristique turpis mauris Spring ipsum venenatis tempus consectetur", "createdAt": 1684779650000}' to topic='twitter-topic'
+2023-05-22 23:21:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text elit consectetur in pharetra Elasticsearch ultricies dignissim sending to kafka topic twitter-topic
+2023-05-22 23:21:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 9178561882948251425, "id": 8228411354641741207, "text": "elit consectetur in pharetra Elasticsearch ultricies dignissim", "createdAt": 1684779660000}' to topic='twitter-topic'
+2023-05-22 23:21:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id ornare elit turpis dolor Spring venenatis ipsum dolor sending to kafka topic twitter-topic
+2023-05-22 23:21:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8285639528247136050, "id": 1360381720240226919, "text": "id ornare elit turpis dolor Spring venenatis ipsum dolor", "createdAt": 1684779670000}' to topic='twitter-topic'
+2023-05-22 23:21:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text lectus tristique venenatis elit venenatis venenatis Spring pharetra lectus sit adipiscing sending to kafka topic twitter-topic
+2023-05-22 23:21:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6927943889371733023, "id": 7837224368712675907, "text": "lectus tristique venenatis elit venenatis venenatis Spring pharetra lectus sit adipiscing", "createdAt": 1684779680000}' to topic='twitter-topic'
+2023-05-22 23:21:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing sit mauris ornare ultricies dolor Spring id elit ut venenatis sending to kafka topic twitter-topic
+2023-05-22 23:21:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7061198121102759674, "id": 6782987260677530181, "text": "adipiscing sit mauris ornare ultricies dolor Spring id elit ut venenatis", "createdAt": 1684779690000}' to topic='twitter-topic'
+2023-05-22 23:21:35 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node 3 disconnected.
+2023-05-22 23:21:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text adipiscing ipsum lectus venenatis sit ultricies tempus dignissim Elasticsearch pharetra consectetur dignissim in varius ipsum sending to kafka topic twitter-topic
+2023-05-22 23:21:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6672926333232008400, "id": 3851554095558660173, "text": "adipiscing ipsum lectus venenatis sit ultricies tempus dignissim Elasticsearch pharetra consectetur dignissim in varius ipsum", "createdAt": 1684779700000}' to topic='twitter-topic'
+2023-05-22 23:21:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id id ut elit consectetur mauris dolor Microservices ornare consectetur sit in in sending to kafka topic twitter-topic
+2023-05-22 23:21:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2873272499563687680, "id": 3100608667153885465, "text": "id id ut elit consectetur mauris dolor Microservices ornare consectetur sit in in", "createdAt": 1684779710000}' to topic='twitter-topic'
+2023-05-22 23:22:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text id dignissim tempus pharetra id elit Elasticsearch ornare tempus dolor lectus sending to kafka topic twitter-topic
+2023-05-22 23:22:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 7610919138398176030, "id": 5510764636492042286, "text": "id dignissim tempus pharetra id elit Elasticsearch ornare tempus dolor lectus", "createdAt": 1684779720000}' to topic='twitter-topic'
+2023-05-22 23:22:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text dolor sit lectus varius varius elit mauris tristique Microservices varius adipiscing ut sit elit dolor ornare sending to kafka topic twitter-topic
+2023-05-22 23:22:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1933507769391660583, "id": 1201265643028614083, "text": "dolor sit lectus varius varius elit mauris tristique Microservices varius adipiscing ut sit elit dolor ornare", "createdAt": 1684779730000}' to topic='twitter-topic'
+2023-05-22 23:22:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare dignissim varius varius turpis ultricies ultricies adipiscing Spring ornare varius id sit consectetur lectus sending to kafka topic twitter-topic
+2023-05-22 23:22:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 2925072591488869987, "id": 3663687285819174898, "text": "ornare dignissim varius varius turpis ultricies ultricies adipiscing Spring ornare varius id sit consectetur lectus", "createdAt": 1684779740000}' to topic='twitter-topic'
+2023-05-22 23:22:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text sit lectus varius consectetur lectus turpis adipiscing ultricies Kafka lectus pharetra in mauris varius mauris sending to kafka topic twitter-topic
+2023-05-22 23:22:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 699665173089829469, "id": 2056489248204043636, "text": "sit lectus varius consectetur lectus turpis adipiscing ultricies Kafka lectus pharetra in mauris varius mauris", "createdAt": 1684779750000}' to topic='twitter-topic'
+2023-05-22 23:22:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ornare pharetra ornare dignissim Elasticsearch venenatis lectus elit sending to kafka topic twitter-topic
+2023-05-22 23:22:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3452740693509550546, "id": 5779982608317551145, "text": "ornare pharetra ornare dignissim Elasticsearch venenatis lectus elit", "createdAt": 1684779760000}' to topic='twitter-topic'
+2023-05-22 23:22:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text pharetra ultricies varius sit Microservices ut tristique sending to kafka topic twitter-topic
+2023-05-22 23:22:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6615414180437104919, "id": 1116987547759422133, "text": "pharetra ultricies varius sit Microservices ut tristique", "createdAt": 1684779770000}' to topic='twitter-topic'
+2023-05-22 23:23:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text sit varius ipsum Elasticsearch consectetur dignissim sending to kafka topic twitter-topic
+2023-05-22 23:23:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6219380485429488987, "id": 8599166927940071960, "text": "sit varius ipsum Elasticsearch consectetur dignissim", "createdAt": 1684779780000}' to topic='twitter-topic'
+2023-05-22 23:23:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text elit dignissim turpis elit varius ipsum tristique Spring id ultricies varius mauris dolor sending to kafka topic twitter-topic
+2023-05-22 23:23:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 3128502617553371734, "id": 3462017131811207824, "text": "elit dignissim turpis elit varius ipsum tristique Spring id ultricies varius mauris dolor", "createdAt": 1684779790000}' to topic='twitter-topic'
+2023-05-22 23:23:20 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut sit ipsum Elasticsearch tempus ipsum sending to kafka topic twitter-topic
+2023-05-22 23:23:20 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 5137472618448957796, "id": 5395365705807118654, "text": "ut sit ipsum Elasticsearch tempus ipsum", "createdAt": 1684779800000}' to topic='twitter-topic'
+2023-05-22 23:23:30 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text turpis tempus dignissim tristique pharetra pharetra venenatis Java lectus ornare ultricies ornare sit elit sending to kafka topic twitter-topic
+2023-05-22 23:23:30 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 1848316475052680005, "id": 6496720717277376545, "text": "turpis tempus dignissim tristique pharetra pharetra venenatis Java lectus ornare ultricies ornare sit elit", "createdAt": 1684779810000}' to topic='twitter-topic'
+2023-05-22 23:23:40 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text consectetur ipsum ipsum tristique tempus sit varius Kafka ornare turpis elit venenatis consectetur sending to kafka topic twitter-topic
+2023-05-22 23:23:40 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4628189713252618464, "id": 297044437584644102, "text": "consectetur ipsum ipsum tristique tempus sit varius Kafka ornare turpis elit venenatis consectetur", "createdAt": 1684779820000}' to topic='twitter-topic'
+2023-05-22 23:23:50 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text ut varius dignissim tristique id sit Microservices adipiscing lectus ut id elit sending to kafka topic twitter-topic
+2023-05-22 23:23:50 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 8169024436122369632, "id": 7146616567037117045, "text": "ut varius dignissim tristique id sit Microservices adipiscing lectus ut id elit", "createdAt": 1684779830000}' to topic='twitter-topic'
+2023-05-22 23:24:00 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text venenatis elit varius ipsum id elit tempus pharetra Microservices varius consectetur in sit turpis elit mauris sending to kafka topic twitter-topic
+2023-05-22 23:24:00 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 4764704669135961979, "id": 7603221739308561210, "text": "venenatis elit varius ipsum id elit tempus pharetra Microservices varius consectetur in sit turpis elit mauris", "createdAt": 1684779840000}' to topic='twitter-topic'
+2023-05-22 23:24:09 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2023-05-22 23:24:09 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-05-22 23:24:09 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-22 23:24:09 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-05-22 23:24:09 [SpringApplicationShutdownHook] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Closing Kafka Producer!
+2023-05-22 23:24:09 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-05-22 23:24:09 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2023-05-22 23:24:09 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-22 23:24:09 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2023-05-22 23:24:09 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2023-05-22 23:24:10 [pool-4-thread-1] INFO  c.m.d.t.t.k.s.l.TwitterKafkaStatusListener - Received status text tempus lectus venenatis ipsum Microservices varius venenatis sending to kafka topic twitter-topic
+2023-05-22 23:24:10 [pool-4-thread-1] INFO  c.m.d.k.p.c.s.i.TwitterKafkaProducer - Sending message='{"userId": 6375665821226084954, "id": 5205832770793420999, "text": "tempus lectus venenatis ipsum Microservices varius venenatis", "createdAt": 1684779850000}' to topic='twitter-topic'
+2023-05-22 23:24:10 [pool-4-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	batch.size = 1638400
+	bootstrap.servers = [localhost:19092, localhost:29092, localhost:39092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2023-05-22 23:24:10 [pool-4-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	proxy.port = -1
+	schema.reflection = false
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	schema.registry.url = [http://localhost:8081]
+	basic.auth.user.info = [hidden]
+	proxy.host = 
+	use.latest.version = false
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2023-05-22 23:24:10 [pool-4-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-2] Instantiated an idempotent producer.
+2023-05-22 23:24:10 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.1.2
+2023-05-22 23:24:10 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: f8c67dc3ae0a3265
+2023-05-22 23:24:10 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1684779850684
+2023-05-22 23:24:10 [kafka-producer-network-thread | producer-2] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-2] Cluster ID: YgSOnTn1SGGysXelibqEnQ
+2023-05-22 23:24:10 [kafka-producer-network-thread | producer-2] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-2] ProducerId set to 34000 with epoch 0
+2023-05-22 23:25:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.16 on localhost.localdomain with PID 12449 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-22 23:25:00 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - The following 1 profile is active: "twitter_to_kafka"
+2023-05-22 23:25:00 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-05-22 23:25:02 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d26969c9-62b2-3fd8-b1b0-86acb2e5b8e6
+2023-05-22 23:25:02 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-05-22 23:25:02 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-05-22 23:25:02 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:25:02 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-05-22 23:25:02 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:25:02 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:25:02 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:25:02 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:25:02 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-05-22 23:25:03 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+2023-05-22 23:25:03 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-22 23:25:03 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:27)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+	at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:749)
+	at java.base/java.util.Map.of(Map.java:1307)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig.adminClient(KafkaAdminConfig.java:23)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$340a125.CGLIB$adminClient$0(<generated>)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$340a125$$FastClassBySpringCGLIB$$1e32f667.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$340a125.adminClient(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted
+2023-05-22 23:26:41 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.16 on localhost.localdomain with PID 12683 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-22 23:26:41 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - The following 1 profile is active: "twitter_to_kafka"
+2023-05-22 23:26:41 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-05-22 23:26:43 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d26969c9-62b2-3fd8-b1b0-86acb2e5b8e6
+2023-05-22 23:26:43 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-05-22 23:26:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-05-22 23:26:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:26:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-05-22 23:26:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:26:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:26:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:26:43 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:26:43 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-05-22 23:26:44 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+2023-05-22 23:26:44 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-22 23:26:44 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:27)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+	at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:749)
+	at java.base/java.util.Map.of(Map.java:1307)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig.adminClient(KafkaAdminConfig.java:23)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$340a125.CGLIB$adminClient$0(<generated>)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$340a125$$FastClassBySpringCGLIB$$1e32f667.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$340a125.adminClient(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted
+2023-05-22 23:50:22 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.16 on localhost.localdomain with PID 14590 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-22 23:50:22 [main] INFO  c.m.d.t.t.k.s.TwitterToKafkaServiceApplication - The following 1 profile is active: "twitter_to_kafka"
+2023-05-22 23:50:22 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-05-22 23:50:23 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d26969c9-62b2-3fd8-b1b0-86acb2e5b8e6
+2023-05-22 23:50:23 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor - Post-processing PropertySource instances
+2023-05-22 23:50:23 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2023-05-22 23:50:23 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:50:23 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+2023-05-22 23:50:23 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:50:23 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource cachedrandom [org.springframework.cloud.util.random.CachedRandomPropertySource] to EncryptablePropertySourceWrapper
+2023-05-22 23:50:23 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource springCloudClientHostInfo [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:50:23 [main] INFO  c.u.j.EncryptablePropertySourceConverter - Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2023-05-22 23:50:23 [main] INFO  c.u.j.f.DefaultLazyPropertyFilter - Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2023-05-22 23:50:24 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+2023-05-22 23:50:24 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-05-22 23:50:24 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterToKafkaServiceApplication': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.microservices.demo.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:27)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaStreamInitializer' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/twitter-to-kafka-service/target/classes/com/microservices/demo/twitter/to/kafka/service/init/impl/KafkaStreamInitializer.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'kafkaAdminClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/kafka/kafka-admin/target/classes/com/microservices/demo/kafka/admin/client/KafkaAdminClient.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'adminClient' defined in class path resource [com/microservices/demo/kafka/admin/config/KafkaAdminConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.kafka.clients.admin.AdminClient]: Factory method 'adminClient' threw exception; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 61 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+	at java.base/java.util.ImmutableCollections$Map1.<init>(ImmutableCollections.java:749)
+	at java.base/java.util.Map.of(Map.java:1307)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig.adminClient(KafkaAdminConfig.java:23)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$340a125.CGLIB$adminClient$0(<generated>)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$340a125$$FastClassBySpringCGLIB$$1e32f667.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.microservices.demo.kafka.admin.config.KafkaAdminConfig$$EnhancerBySpringCGLIB$$340a125.adminClient(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 62 common frames omitted

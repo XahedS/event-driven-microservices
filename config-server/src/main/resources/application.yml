@@ -27,11 +27,11 @@ spring:
       name: spring_cloud_user
 #Below password is generated using the old password springCloud_Pwd! from jasypt
       password: ENC(o+Ei3+fudsNcFfSj/5lTSLvwgOcb1cYUyz8m+lEndMJfKS2Jiuy+q4DTA6cMcZDwYSApWM5MS+zXba5tNgCjNA==)
-#      password: springCloud_Pwd!
+      #      password: springCloud_Pwd!
 #following key has been used to get the above encrypted password. Defining the jasypt.encryptor.password will
 #provide the key to spring boot at runtime!
-#jasypt:
-#  encryptor:
+jasypt:
+  encryptor:
 #    password: ${JASYPT_ENCRYPTOR_PASSWORD} #This key will be read in runtime from enviornment variable defined
 #Once defined it as env variable this section jasypt.encryptor.password can be removed!
-#    password: Demo_Pwd!2020 #This is direct key and non-secure.
+    password: Demo_Pwd!2020 #This is direct key and non-secure.

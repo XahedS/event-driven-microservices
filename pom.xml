@@ -13,7 +13,7 @@
         <module>config-server</module>
 		<!--Commented playground module because it will not be used as sub-module in our porject, it is just
         a helper module to encrypt the text based keys in our project-->
-		<!--		<module>playground</module>-->
+				<module>playground-attempt</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

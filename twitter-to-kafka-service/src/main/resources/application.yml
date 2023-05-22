@@ -7,16 +7,22 @@ spring:
 
   cloud:
     config:
+#      name: twitter-to-kafa-service,config-client   #This doesnot works for me!
       name: config-client-twitter_to_kafa
+      username: spring_cloud_user
+#      password: ENC(o+Ei3+fudsNcFfSj/5lTSLvwgOcb1cYUyz8m+lEndMJfKS2Jiuy+q4DTA6cMcZDwYSApWM5MS+zXba5tNgCjNA==)
+#      password: ENC(o+Ei3+fudsNcFfSj/5lTSLvwgOcb1cYUyz8m+lEndMJfKS2Jiuy+q4DTA6cMcZDwYSApWM5MS+zXba5tNgCjNA==)
+      password: springCloud_Pwd! #or ENC(o+Ei3+fudsNcFfSj/5lTSLvwgOcb1cYUyz8m+lEndMJfKS2Jiuy+q4DTA6cMcZDwYSApWM5MS+zXba5tNgCjNA==)
 
   config:
    import: configserver:http://localhost:8888
-
+#The spring.security fields are not required as this service will use spring.cloud fields to access
+#the configuration files handled by config-server.
 #  security:
 #    user:
 #      name: spring_cloud_user
 #      password: springCloud_Pwd! or ENC(o+Ei3+fudsNcFfSj/5lTSLvwgOcb1cYUyz8m+lEndMJfKS2Jiuy+q4DTA6cMcZDwYSApWM5MS+zXba5tNgCjNA==)
-
+#Highlighting these fields, as the microservice is not picking values from the enviornment variables.
 jasypt:
-  encryptor:
-    password: Demo_Pwd!2020
+ encryptor:
+   password: Demo_Pwd!2020
