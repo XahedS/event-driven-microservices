@@ -27,5 +27,9 @@ spring:
       name: spring_cloud_user
       #Added the below user name and password for JCE encryption mechanism. JCE uses spring cloud
       password: '{cipher}1d9c0f4fc679c59ee704269fc488c7d7365296c312f5e2ee05956d28ca635c9984ec2bcb2917331a6209d3ab488b64c7'
-encrypt:
-  key: 'Demo_Pwd!2020'
+
+#Previously was missing this encrypt value, Now added this value to the env variable in bash_profile and working
+#perfectly fine.
+
+#encrypt:
+#  key: 'Demo_Pwd!2020'
