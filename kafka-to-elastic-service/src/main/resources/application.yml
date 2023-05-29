@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: kafka-to-elastic-service
+
+  profiles:
+    active: kafka_to_elastic
+
+  cloud:
+    config:
+      name: config-client-kafka_to_elastic
+      #Added the below user name and password for JCE encryption mechanism. JCE uses spring cloud
+      username: spring_cloud_user
+      #      password: springCloud_Pwd!
+      password: '{cipher}864187498c1689c6845014ae2e538057aa7b374b5862a8604b183b5e61b23391d2cbb9b8c0118fa7039e048b3471eefe'
+
+  config:
+    import: configserver:http://localhost:8888

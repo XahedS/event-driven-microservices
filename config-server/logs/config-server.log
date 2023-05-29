@@ -1,17 +1,17 @@
-2023-05-20 14:53:02 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-20 14:53:02 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 19237 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-20 14:53:02 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-20 14:53:04 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-20 14:53:05 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-20 14:53:05 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-20 14:53:05 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-20 14:53:05 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-20 14:53:05 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-20 14:53:05 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2317 ms
-2023-05-20 14:53:06 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-20 14:53:06 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-20 14:53:06 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-20 14:53:08 [sshd-JGitSshClient[7c4b5ceb]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 17:40:34 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-05-28 17:40:34 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 16322 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-28 17:40:34 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-05-28 17:40:36 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
+2023-05-28 17:40:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-05-28 17:40:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-05-28 17:40:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-28 17:40:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-28 17:40:37 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-28 17:40:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3436 ms
+2023-05-28 17:40:39 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+2023-05-28 17:40:39 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+2023-05-28 17:40:39 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
+2023-05-28 17:40:41 [sshd-JGitSshClient[589fb74d]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -74,13 +74,13 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-20 14:53:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-20 14:53:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-20 14:53:11 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 10.486 seconds (JVM running for 11.651)
-2023-05-20 14:53:40 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-20 14:53:40 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2023-05-20 14:53:40 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2023-05-20 14:53:42 [sshd-JGitSshClient[498ea822]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 17:40:44 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-05-28 17:40:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-05-28 17:40:44 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 11.572 seconds (JVM running for 12.645)
+2023-05-28 17:41:06 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-28 17:41:06 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-28 17:41:06 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-05-28 17:41:07 [sshd-JGitSshClient[9d00906]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -131,20 +131,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:10:16 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:10:16 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 16607 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:10:16 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:10:18 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:10:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:10:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:10:18 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:10:18 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:10:18 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:10:18 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2087 ms
-2023-05-23 00:10:20 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:10:20 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:10:20 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:10:22 [sshd-JGitSshClient[267ff4df]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 17:41:09 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13716874969413630591/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-13716874969413630591/'
+2023-05-28 17:42:39 [sshd-JGitSshClient[5b62cd24]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -195,14 +183,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:10:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:10:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-23 00:10:26 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2023-05-23 00:10:26 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 11.664 seconds (JVM running for 12.655)
-2023-05-23 00:11:10 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-23 00:11:10 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2023-05-23 00:11:10 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2023-05-23 00:11:12 [sshd-JGitSshClient[1af1cff1]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 17:42:41 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13716874969413630591/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-13716874969413630591/'
+2023-05-28 17:44:06 [sshd-JGitSshClient[13d4d606]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -253,8 +235,21 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:11:14 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-1754549364038490929/config-client.yml]' via location 'file:/tmp/config-repo-1754549364038490929/'
-2023-05-23 00:13:22 [sshd-JGitSshClient[d93517b]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 17:44:08 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13716874969413630591/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-13716874969413630591/'
+2023-05-28 21:00:52 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-05-28 21:00:52 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 13504 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-28 21:00:52 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-05-28 21:00:54 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
+2023-05-28 21:00:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-05-28 21:00:55 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-05-28 21:00:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-28 21:00:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-28 21:00:55 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-28 21:00:55 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2415 ms
+2023-05-28 21:00:56 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+2023-05-28 21:00:56 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+2023-05-28 21:00:57 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
+2023-05-28 21:00:58 [sshd-JGitSshClient[23b1aa9]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -305,8 +300,14 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:13:24 [http-nio-8888-exec-4] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-1754549364038490929/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-1754549364038490929/'
-2023-05-23 00:13:56 [sshd-JGitSshClient[7c018e38]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 21:01:01 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-05-28 21:01:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-05-28 21:01:02 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2023-05-28 21:01:02 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 11.562 seconds (JVM running for 12.711)
+2023-05-28 21:01:37 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-28 21:01:37 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-28 21:01:37 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-28 21:01:38 [sshd-JGitSshClient[2ff0f684]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -357,21 +358,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:13:59 [http-nio-8888-exec-7] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-1754549364038490929/config-client.yml]' via location 'file:/tmp/config-repo-1754549364038490929/'
-2023-05-23 00:23:53 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:23:54 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 17530 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:23:54 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:23:57 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:23:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:23:59 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:23:59 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:23:59 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:23:59 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:23:59 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5241 ms
-2023-05-23 00:24:02 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:24:02 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:24:03 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:24:05 [sshd-JGitSshClient[3af236d0]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 21:01:40 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 21:04:07 [sshd-JGitSshClient[499ff6f4]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -422,14 +410,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:24:08 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:24:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-23 00:24:09 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2023-05-23 00:24:09 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 18.095 seconds (JVM running for 20.436)
-2023-05-23 00:27:43 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-23 00:27:43 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2023-05-23 00:27:43 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2023-05-23 00:27:45 [sshd-JGitSshClient[2f3674e4]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 21:04:08 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 21:07:00 [sshd-JGitSshClient[3d94bb32]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -480,21 +462,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:27:47 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-9948351722961882741/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-9948351722961882741/'
-2023-05-23 00:29:38 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:29:38 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 18231 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:29:38 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:29:39 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:29:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:29:40 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:29:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:29:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:29:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:29:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2157 ms
-2023-05-23 00:29:41 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:29:41 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:29:41 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:29:43 [sshd-JGitSshClient[714e861f]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 21:07:02 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 21:08:08 [sshd-JGitSshClient[4547661c]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -545,14 +514,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:29:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:29:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-23 00:29:47 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2023-05-23 00:29:47 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 10.93 seconds (JVM running for 12.001)
-2023-05-23 00:33:07 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-23 00:33:07 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2023-05-23 00:33:07 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2023-05-23 00:33:10 [sshd-JGitSshClient[1ccdca9]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 21:08:10 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 22:00:13 [sshd-JGitSshClient[3d49ea37]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -603,21 +566,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:33:12 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-18033705984012335953/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-18033705984012335953/'
-2023-05-23 00:38:27 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:38:27 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 19629 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:38:27 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:38:29 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:38:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:38:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:38:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:38:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:38:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:38:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2641 ms
-2023-05-23 00:38:31 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:38:31 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:38:31 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:38:33 [sshd-JGitSshClient[13ef7fa1]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 22:00:14 [http-nio-8888-exec-9] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 22:24:35 [sshd-JGitSshClient[43d4a835]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -668,43 +618,9 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:38:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:38:36 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8888 is already in use
-2023-05-23 00:38:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:38:36 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2023-05-23 00:38:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:38:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:38:36 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2023-05-23 00:38:36 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8888 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8888 or configure this application to listen on another port.
-
-2023-05-23 00:39:51 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:39:51 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 19790 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:39:51 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:39:54 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:39:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:39:55 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:39:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:39:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:39:55 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:39:55 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3879 ms
-2023-05-23 00:39:58 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:39:58 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:39:58 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:40:00 [sshd-JGitSshClient[3af236d0]-nio2-thread-3] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 22:24:37 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Fetched for remote main and found 1 updates
+2023-05-28 22:24:37 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 22:27:04 [sshd-JGitSshClient[20bd817]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -755,24 +671,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:40:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:40:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-23 00:40:04 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2023-05-23 00:40:04 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 14.789 seconds (JVM running for 16.422)
-2023-05-23 00:41:36 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:41:36 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 20561 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:41:36 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:41:38 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:41:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:41:39 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:41:39 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:41:39 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:41:39 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:41:39 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2491 ms
-2023-05-23 00:41:40 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:41:40 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:41:40 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:41:42 [sshd-JGitSshClient[402b4f81]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 22:27:06 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 22:28:50 [sshd-JGitSshClient[1b64286f]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -823,24 +723,9 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:41:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:41:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-23 00:41:47 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2023-05-23 00:41:47 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 12.129 seconds (JVM running for 13.565)
-2023-05-23 00:44:02 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:44:02 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 21470 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:44:02 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:44:04 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:44:05 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:44:05 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:44:05 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:44:05 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:44:05 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:44:05 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2839 ms
-2023-05-23 00:44:07 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:44:07 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:44:07 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:44:09 [sshd-JGitSshClient[7de147e9]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 22:28:52 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Fetched for remote main and found 1 updates
+2023-05-28 22:28:52 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 22:31:30 [sshd-JGitSshClient[13eede33]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -891,24 +776,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:44:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:44:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-23 00:44:13 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2023-05-23 00:44:13 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 13.041 seconds (JVM running for 14.437)
-2023-05-23 00:46:38 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:46:38 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 22451 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:46:38 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:46:40 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:46:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:46:40 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:46:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:46:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:46:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:46:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2164 ms
-2023-05-23 00:46:42 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:46:42 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:46:43 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:46:44 [sshd-JGitSshClient[402b4f81]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 22:31:32 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 22:35:45 [sshd-JGitSshClient[73061aca]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -959,23 +828,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:46:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:46:48 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-23 00:46:48 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 11.506 seconds (JVM running for 13.023)
-2023-05-23 00:51:03 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:51:03 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 6170 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:51:03 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:51:05 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:51:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:51:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:51:06 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:51:06 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:51:06 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:51:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2367 ms
-2023-05-23 00:51:07 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:51:07 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:51:08 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:51:09 [sshd-JGitSshClient[2edb2f8b]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 22:35:47 [http-nio-8888-exec-9] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 22:41:50 [sshd-JGitSshClient[5577b169]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -1026,14 +880,9 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:51:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:51:12 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-23 00:51:13 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2023-05-23 00:51:13 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 11.17 seconds (JVM running for 12.619)
-2023-05-23 00:51:37 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-23 00:51:37 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2023-05-23 00:51:37 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2023-05-23 00:51:39 [sshd-JGitSshClient[ea8515b]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 22:41:52 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Fetched for remote main and found 1 updates
+2023-05-28 22:41:52 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 22:47:30 [sshd-JGitSshClient[28bfe2d4]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -1084,8 +933,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:51:41 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-9159115889018321299/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-9159115889018321299/'
-2023-05-23 00:53:19 [sshd-JGitSshClient[3402654b]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 22:47:31 [http-nio-8888-exec-3] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 22:49:35 [sshd-JGitSshClient[1648e8a]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -1136,21 +985,8 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:53:21 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-9159115889018321299/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-9159115889018321299/'
-2023-05-23 00:54:16 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
-2023-05-23 00:54:16 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 9592 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
-2023-05-23 00:54:16 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
-2023-05-23 00:54:18 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
-2023-05-23 00:54:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
-2023-05-23 00:54:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:54:18 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2023-05-23 00:54:18 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
-2023-05-23 00:54:18 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2023-05-23 00:54:18 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2307 ms
-2023-05-23 00:54:20 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
-2023-05-23 00:54:20 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
-2023-05-23 00:54:20 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
-2023-05-23 00:54:22 [sshd-JGitSshClient[7772d266]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 22:49:37 [http-nio-8888-exec-6] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 23:21:12 [sshd-JGitSshClient[32527cc6]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -1201,14 +1037,22 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:54:24 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
-2023-05-23 00:54:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
-2023-05-23 00:54:25 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
-2023-05-23 00:54:25 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 12.077 seconds (JVM running for 13.359)
-2023-05-23 00:54:34 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-05-23 00:54:34 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2023-05-23 00:54:34 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2023-05-23 00:54:36 [sshd-JGitSshClient[3d39af1d]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+2023-05-28 23:21:14 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.MultipleJGitEnvironmentRepository - Fetched for remote main and found 1 updates
+2023-05-28 23:21:14 [http-nio-8888-exec-8] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-13368149379826965267/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-13368149379826965267/'
+2023-05-28 23:48:11 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-05-28 23:48:11 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 26549 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-28 23:48:11 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-05-28 23:48:13 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
+2023-05-28 23:48:14 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-05-28 23:48:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-05-28 23:48:14 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-28 23:48:14 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-28 23:48:14 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-28 23:48:14 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2296 ms
+2023-05-28 23:48:15 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+2023-05-28 23:48:15 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+2023-05-28 23:48:15 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
+2023-05-28 23:48:17 [sshd-JGitSshClient[402b4f81]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
 java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
 	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
@@ -1259,4 +1103,194 @@ java.io.StreamCorruptedException: Invalid DER: length field too big: 186
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
-2023-05-23 00:54:38 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-5565054226907369649/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-5565054226907369649/'
+2023-05-28 23:48:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-05-28 23:48:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-05-28 23:48:21 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2023-05-28 23:48:21 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 10.905 seconds (JVM running for 11.868)
+2023-05-28 23:48:41 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-05-28 23:48:41 [main] INFO  c.m.demo.config.server.ConfigServer - Starting ConfigServer using Java 11.0.16 on localhost.localdomain with PID 26681 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/config-server/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-05-28 23:48:41 [main] INFO  c.m.demo.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-05-28 23:48:43 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=cef52e5f-2b72-3743-bd00-69694d83a014
+2023-05-28 23:48:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-05-28 23:48:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-05-28 23:48:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-28 23:48:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-05-28 23:48:43 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-28 23:48:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2328 ms
+2023-05-28 23:48:45 [main] INFO  o.a.s.c.u.s.b.BouncyCastleSecurityProviderRegistrar - getOrCreateProvider(BC) created instance of org.bouncycastle.jce.provider.BouncyCastleProvider
+2023-05-28 23:48:45 [main] INFO  o.a.s.c.u.s.e.EdDSASecurityProviderRegistrar - getOrCreateProvider(EdDSA) created instance of net.i2p.crypto.eddsa.EdDSASecurityProvider
+2023-05-28 23:48:45 [main] INFO  o.a.s.c.i.DefaultIoServiceFactoryFactory - No detected/configured IoServiceFactoryFactory using Nio2ServiceFactoryFactory
+2023-05-28 23:48:46 [sshd-JGitSshClient[6bf570c]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+java.io.StreamCorruptedException: Invalid DER: length field too big: 186
+	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
+	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.decodeRSAKeyPair(RSAPEMResourceKeyPairParser.java:114)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.extractKeyPairs(RSAPEMResourceKeyPairParser.java:76)
+	at org.apache.sshd.common.config.keys.loader.pem.AbstractPEMResourceKeyPairParser.extractKeyPairs(AbstractPEMResourceKeyPairParser.java:172)
+	at org.apache.sshd.common.config.keys.loader.AbstractKeyPairResourceParser.loadKeyPairs(AbstractKeyPairResourceParser.java:117)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.pem.PEMResourceParserUtils$1.loadKeyPairs(PEMResourceParserUtils.java:53)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:157)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:148)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:139)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:130)
+	at org.apache.sshd.common.util.security.SecurityUtils.loadKeyPairIdentities(SecurityUtils.java:522)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:114)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:89)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.access$0(CachingKeyPairProvider.java:81)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider$CancellingKeyPairIterator.hasNext(CachingKeyPairProvider.java:169)
+	at org.eclipse.jgit.internal.transport.sshd.JGitSshClient$CombinedKeyIdentityProvider$1.hasNext(JGitSshClient.java:422)
+	at org.apache.sshd.common.keyprovider.MultiKeyIdentityIterator.hasNext(MultiKeyIdentityIterator.java:86)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator$1$1.hasNext(UserAuthPublicKeyIterator.java:119)
+	at org.apache.sshd.common.util.helper.LazyIterablesConcatenator$1.hasNext(LazyIterablesConcatenator.java:68)
+	at org.apache.sshd.common.util.GenericUtils.selectNextMatchingValue(GenericUtils.java:808)
+	at org.apache.sshd.common.util.helper.LazyMatchingTypeIterator.hasNext(LazyMatchingTypeIterator.java:62)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator.hasNext(UserAuthPublicKeyIterator.java:196)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.resolveAttemptedPublicKeyIdentity(UserAuthPublicKey.java:212)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.sendAuthDataRequest(UserAuthPublicKey.java:131)
+	at org.apache.sshd.client.auth.AbstractUserAuth.process(AbstractUserAuth.java:71)
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:317)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:503)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:429)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1466)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:389)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:198)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker.invokeDirect(Invoker.java:158)
+	at java.base/sun.nio.ch.UnixAsynchronousSocketChannelImpl.implRead(UnixAsynchronousSocketChannelImpl.java:562)
+	at java.base/sun.nio.ch.AsynchronousSocketChannelImpl.read(AsynchronousSocketChannelImpl.java:277)
+	at java.base/sun.nio.ch.AsynchronousSocketChannelImpl.read(AsynchronousSocketChannelImpl.java:298)
+	at org.apache.sshd.common.io.nio2.Nio2Session.doReadCycle(Nio2Session.java:430)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:363)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-05-28 23:48:49 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-05-28 23:48:49 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-05-28 23:48:50 [main] INFO  o.s.cloud.commons.util.InetUtils - Cannot determine local hostname
+2023-05-28 23:48:50 [main] INFO  c.m.demo.config.server.ConfigServer - Started ConfigServer in 10.855 seconds (JVM running for 11.829)
+2023-05-28 23:49:00 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-28 23:49:00 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-28 23:49:00 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-05-28 23:49:02 [sshd-JGitSshClient[df7f92d]-nio2-thread-5] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+java.io.StreamCorruptedException: Invalid DER: length field too big: 186
+	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
+	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.decodeRSAKeyPair(RSAPEMResourceKeyPairParser.java:114)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.extractKeyPairs(RSAPEMResourceKeyPairParser.java:76)
+	at org.apache.sshd.common.config.keys.loader.pem.AbstractPEMResourceKeyPairParser.extractKeyPairs(AbstractPEMResourceKeyPairParser.java:172)
+	at org.apache.sshd.common.config.keys.loader.AbstractKeyPairResourceParser.loadKeyPairs(AbstractKeyPairResourceParser.java:117)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.pem.PEMResourceParserUtils$1.loadKeyPairs(PEMResourceParserUtils.java:53)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:157)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:148)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:139)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:130)
+	at org.apache.sshd.common.util.security.SecurityUtils.loadKeyPairIdentities(SecurityUtils.java:522)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:114)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:89)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.access$0(CachingKeyPairProvider.java:81)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider$CancellingKeyPairIterator.hasNext(CachingKeyPairProvider.java:169)
+	at org.eclipse.jgit.internal.transport.sshd.JGitSshClient$CombinedKeyIdentityProvider$1.hasNext(JGitSshClient.java:422)
+	at org.apache.sshd.common.keyprovider.MultiKeyIdentityIterator.hasNext(MultiKeyIdentityIterator.java:86)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator$1$1.hasNext(UserAuthPublicKeyIterator.java:119)
+	at org.apache.sshd.common.util.helper.LazyIterablesConcatenator$1.hasNext(LazyIterablesConcatenator.java:68)
+	at org.apache.sshd.common.util.GenericUtils.selectNextMatchingValue(GenericUtils.java:808)
+	at org.apache.sshd.common.util.helper.LazyMatchingTypeIterator.hasNext(LazyMatchingTypeIterator.java:62)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator.hasNext(UserAuthPublicKeyIterator.java:196)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.resolveAttemptedPublicKeyIdentity(UserAuthPublicKey.java:212)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.sendAuthDataRequest(UserAuthPublicKey.java:131)
+	at org.apache.sshd.client.auth.AbstractUserAuth.process(AbstractUserAuth.java:71)
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:317)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:503)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:429)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1466)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:389)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:198)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-05-28 23:49:03 [http-nio-8888-exec-1] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-854753568921173885/config-client-twitter_to_kafa.yml]' via location 'file:/tmp/config-repo-854753568921173885/'
+2023-05-28 23:49:38 [sshd-JGitSshClient[4b3d470]-nio2-thread-4] WARN  o.e.j.i.t.s.CachingKeyPairProvider - Invalid DER: length field too big: 186
+java.io.StreamCorruptedException: Invalid DER: length field too big: 186
+	at org.apache.sshd.common.util.io.der.DERParser.readLength(DERParser.java:96)
+	at org.apache.sshd.common.util.io.der.DERParser.readObject(DERParser.java:131)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.decodeRSAKeyPair(RSAPEMResourceKeyPairParser.java:114)
+	at org.apache.sshd.common.config.keys.loader.pem.RSAPEMResourceKeyPairParser.extractKeyPairs(RSAPEMResourceKeyPairParser.java:76)
+	at org.apache.sshd.common.config.keys.loader.pem.AbstractPEMResourceKeyPairParser.extractKeyPairs(AbstractPEMResourceKeyPairParser.java:172)
+	at org.apache.sshd.common.config.keys.loader.AbstractKeyPairResourceParser.loadKeyPairs(AbstractKeyPairResourceParser.java:117)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.pem.PEMResourceParserUtils$1.loadKeyPairs(PEMResourceParserUtils.java:53)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceParser$2.loadKeyPairs(KeyPairResourceParser.java:166)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:157)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:148)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:139)
+	at org.apache.sshd.common.config.keys.loader.KeyPairResourceLoader.loadKeyPairs(KeyPairResourceLoader.java:130)
+	at org.apache.sshd.common.util.security.SecurityUtils.loadKeyPairIdentities(SecurityUtils.java:522)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:114)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.loadKey(CachingKeyPairProvider.java:89)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider.access$0(CachingKeyPairProvider.java:81)
+	at org.eclipse.jgit.internal.transport.sshd.CachingKeyPairProvider$CancellingKeyPairIterator.hasNext(CachingKeyPairProvider.java:169)
+	at org.eclipse.jgit.internal.transport.sshd.JGitSshClient$CombinedKeyIdentityProvider$1.hasNext(JGitSshClient.java:422)
+	at org.apache.sshd.common.keyprovider.MultiKeyIdentityIterator.hasNext(MultiKeyIdentityIterator.java:86)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator$1$1.hasNext(UserAuthPublicKeyIterator.java:119)
+	at org.apache.sshd.common.util.helper.LazyIterablesConcatenator$1.hasNext(LazyIterablesConcatenator.java:68)
+	at org.apache.sshd.common.util.GenericUtils.selectNextMatchingValue(GenericUtils.java:808)
+	at org.apache.sshd.common.util.helper.LazyMatchingTypeIterator.hasNext(LazyMatchingTypeIterator.java:62)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKeyIterator.hasNext(UserAuthPublicKeyIterator.java:196)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.resolveAttemptedPublicKeyIdentity(UserAuthPublicKey.java:212)
+	at org.apache.sshd.client.auth.pubkey.UserAuthPublicKey.sendAuthDataRequest(UserAuthPublicKey.java:131)
+	at org.apache.sshd.client.auth.AbstractUserAuth.process(AbstractUserAuth.java:71)
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:317)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:503)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:429)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1466)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:389)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:198)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-05-28 23:49:40 [http-nio-8888-exec-2] INFO  o.s.c.c.s.e.NativeEnvironmentRepository - Adding property source: Config resource 'file [/tmp/config-repo-854753568921173885/config-client-kafka_to_elastic.yml]' via location 'file:/tmp/config-repo-854753568921173885/'
