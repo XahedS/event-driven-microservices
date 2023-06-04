@@ -1,0 +1,66 @@
+//#localhost:9200 This will help to check the localhost endpoint.
+//#In case of error while putting document into the index: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+//#Solution: curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
+//#Create a new index by calling PUT /index-name endpoint in postman. e.g. localhost:9200/twitter-index ; observe the reply received from the elastic search
+//#Search for created document in the index: localhost:9200/twitter-index/_search?q=id:1, It is a GET request.
+//#Create a new document in the index: localhost:9200/twitter-index/_doc/1, this is a POST request.
+//Following is passed as Body
+//{
+//    "userId": "1",
+//    "id": "1",
+//    "createdAt": "2023-05-30T23:38:00+0000",
+//    "text": "testing"
+//
+//}
+
+
+//Use this with the PUT method in postman with following URL localhost:9200/twitter-index
+//Paste below in the body section and hit send. This will create a index with name twitter-index in elastic search.
+//Any document placed in this index will have UserID, ID, CreatedAt & text as key's. Below actually mapping defines the schema.
+{
+    "mappings": {
+        "properties": {
+            "userId": {
+                "type": "long"
+            },
+            "id": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "createdAt": {
+                "type": "date",
+		"format": "yyyy-MM-dd'T'HH:mm:ssZZ"
+            },
+            "text": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Following will be the reply from elastic search.
+//{
+//    "acknowledged": true,
+//    "shards_acknowledged": false,
+//    "index": "twitter-index"
+//}
+
+//localhost:9200/twitter-index/_doc/1 A post mehthod
+//{
+//    "userId": "1",
+//    "id": "1",
+//    "createdAt":  "2023-05-30'T'00:44:00+0000",
+//    "text": "test multi word"
+//}
+//
