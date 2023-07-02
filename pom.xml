@@ -60,6 +60,7 @@
 		<elastic.version>7.16.0</elastic.version>
 		<spring-validation.version>2.7.11</spring-validation.version>
 <!--		<spring-hateoas.version>2.3.4.RELEASE</spring-hateoas.version>-->
+		<spring-doc.version>1.6.8</spring-doc.version>
 	</properties>
 
 	<repositories>
@@ -71,7 +72,12 @@
 
 	<dependencyManagement>
 		<dependencies>
-<!--			<dependency>-->
+			<dependency>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-ui</artifactId>
+				<version>${spring-doc.version}</version>
+			</dependency>
+			<!--			<dependency>-->
 <!--				<groupId>org.springframework.boot</groupId>-->
 <!--				<artifactId>spring-boot-starter-hateoas</artifactId>-->
 <!--				<version>${spring-hateoas.version}</version>-->
