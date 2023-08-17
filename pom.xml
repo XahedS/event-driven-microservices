@@ -20,6 +20,7 @@
 		<module>elastic/elastic-query-client</module>
 		<module>common-util</module>
 		<module>elastic-query-service</module>
+		<module>elastic-query-web-client</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -61,6 +62,11 @@
 		<spring-validation.version>2.7.11</spring-validation.version>
 <!--		<spring-hateoas.version>2.3.4.RELEASE</spring-hateoas.version>-->
 		<spring-doc.version>1.6.8</spring-doc.version>
+		<spring-boot-starter-thymeleaf.version>2.7.11</spring-boot-starter-thymeleaf.version>
+<!--		<spring-boot-thymeleaf-extras.version>3.1.0.RELEASE</spring-boot-thymeleaf-extras.version>-->
+		<spring-boot-thymeleaf-extras.version>3.0.4.RELEASE</spring-boot-thymeleaf-extras.version>
+		<spring-cloud-loadbalancer.version>3.1.4</spring-cloud-loadbalancer.version>
+
 	</properties>
 
 	<repositories>
@@ -72,6 +78,21 @@
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-loadbalancer</artifactId>
+				<version>${spring-cloud-loadbalancer.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.thymeleaf.extras</groupId>
+				<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+				<version>${spring-boot-thymeleaf-extras.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-thymeleaf</artifactId>
+				<version>${spring-boot-starter-thymeleaf.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.springdoc</groupId>
 				<artifactId>springdoc-openapi-ui</artifactId>

@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +33,9 @@ public class ElasticDocumentController {
     public ElasticDocumentController(ElasticQueryService queryService) {
         this.elasticQueryService = queryService;
     }
-
+    //Adding port information to track logging in the case of load balancer
+    @Value("${server.port}")
+    private String port;
     //The Operation annotation is swagger annotation and provides the general description of the method or class
     //The ApiResponse annotation sets different descriptions, content media type & response models schemas for different
     //response status codes
@@ -111,7 +114,9 @@ public class ElasticDocumentController {
         // to the text field in ElasticQueryServiceRequestModel
         List<ElasticQueryServiceResponseModel> response =
                 elasticQueryService.getDocumentByText( elasticQueryServiceRequestModel.getText());
-         LOG.debug("Elasticsearch returned {} documents", response.size());
+        //Added port information in below log to see which elastic-query-service instance is being used in case of
+        //load balancer
+         LOG.debug("Elasticsearch returned {} of documents on port {} ", response.size(), port);
         return ResponseEntity.ok(response);
     }
 

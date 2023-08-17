@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: elastic-query-web-client
+
+  profiles:
+    active: elastic_query_web
+
+  cloud:
+    config:
+      name: config-client-elastic_query_web
+      #Added the below username and password for JCE encryption mechanism. JCE uses spring cloud
+      username: spring_cloud_user
+      #      password: springCloud_Pwd!
+      password: '{cipher}864187498c1689c6845014ae2e538057aa7b374b5862a8604b183b5e61b23391d2cbb9b8c0118fa7039e048b3471eefe'
+
+  config:
+    import: configserver:http://localhost:8888
+
+
+#Previously was missing this encrypt value, Now added this value to the env variable in bash_profile and working
+#perfectly fine.
+#encrypt:
+#  key: 'Demo_Pwd!2020'
