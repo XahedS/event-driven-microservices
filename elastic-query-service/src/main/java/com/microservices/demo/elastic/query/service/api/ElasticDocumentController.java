@@ -1,8 +1,8 @@
 package com.microservices.demo.elastic.query.service.api;
 
 import com.microservices.demo.elastic.query.service.business.ElasticQueryService;
-import com.microservices.demo.elastic.query.service.model.ElasticQueryServiceRequestModel;
-import com.microservices.demo.elastic.query.service.model.ElasticQueryServiceResponseModel;
+import com.microservices.demo.elastic.query.service.common.model.ElasticQueryServiceRequestModel;
+import com.microservices.demo.elastic.query.service.common.model.ElasticQueryServiceResponseModel;
 import com.microservices.demo.elastic.query.service.model.ElasticQueryServiceResponseModelV2;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -13,13 +13,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
-import org.springframework.jmx.export.annotation.ManagedOperation;
 import org.springframework.web.bind.annotation.*;
 
-import javax.management.Query;
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
-import java.util.ArrayList;
 import java.util.List;
 
 
