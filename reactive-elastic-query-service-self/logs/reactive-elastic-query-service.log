@@ -1,0 +1,360 @@
+2023-08-31 01:14:35 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-08-31 01:14:35 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 11.0.16 on localhost.localdomain with PID 10840 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-08-31 01:14:35 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "reactive_elastic_query"
+2023-08-31 01:14:35 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-08-31 01:14:35 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=config-client-reactive_elastic_query, profiles=[reactive_elastic_query], label=null, version=7e5420a44d911dedd11d8c3dcb911f760ed895e2, state=null
+2023-08-31 01:14:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2023-08-31 01:14:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 215 ms. Found 0 Elasticsearch repository interfaces.
+2023-08-31 01:14:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2023-08-31 01:14:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 1 Reactive Elasticsearch repository interfaces.
+2023-08-31 01:14:36 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d7dcbb0-1d83-30bd-92b3-2268a30e4b94
+2023-08-31 01:14:37 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticDocumentController' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/api/ElasticDocumentController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterElasticQueryService' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterElasticQueryService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+2023-08-31 01:14:37 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-31 01:14:37 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticDocumentController' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/api/ElasticDocumentController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterElasticQueryService' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterElasticQueryService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.microservices.demo.reactive.elastic.query.service.ReactiveElasticQueryServiceApplication.main(ReactiveElasticQueryServiceApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterElasticQueryService' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterElasticQueryService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.lambda$instantiateClass$5(RepositoryFactorySupport.java:579)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.instantiateClass(RepositoryFactorySupport.java:579)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getTargetRepositoryViaReflection(RepositoryFactorySupport.java:544)
+	at org.springframework.data.elasticsearch.repository.support.ReactiveElasticsearchRepositoryFactory.getTargetRepository(ReactiveElasticsearchRepositoryFactory.java:89)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231)
+	at org.springframework.data.util.Lazy.get(Lazy.java:115)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.elasticsearch.repository.support.ReactiveElasticsearchRepositoryFactoryBean.afterPropertiesSet(ReactiveElasticsearchRepositoryFactoryBean.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 58 common frames omitted
+Caused by: org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpressions(TemplateAwareExpressionParser.java:107)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseTemplate(TemplateAwareExpressionParser.java:62)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpression(TemplateAwareExpressionParser.java:49)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.lambda$getExpressionForIndexName$3(SimpleElasticsearchPersistentEntity.java:330)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.getExpressionForIndexName(SimpleElasticsearchPersistentEntity.java:329)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.resolve(SimpleElasticsearchPersistentEntity.java:313)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.resolve(SimpleElasticsearchPersistentEntity.java:297)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.getIndexCoordinates(SimpleElasticsearchPersistentEntity.java:126)
+	at org.springframework.data.elasticsearch.core.ReactiveIndexTemplate.getIndexCoordinatesFor(ReactiveIndexTemplate.java:348)
+	at org.springframework.data.elasticsearch.core.ReactiveIndexTemplate.<init>(ReactiveIndexTemplate.java:97)
+	at org.springframework.data.elasticsearch.core.ReactiveElasticsearchTemplate.indexOps(ReactiveElasticsearchTemplate.java:742)
+	at org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository.<init>(SimpleReactiveElasticsearchRepository.java:58)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 71 common frames omitted
+2023-08-31 01:53:29 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-08-31 01:53:29 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 11.0.16 on localhost.localdomain with PID 13384 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-08-31 01:53:29 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "reactive_elastic_query"
+2023-08-31 01:53:29 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-08-31 01:53:29 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=config-client-reactive_elastic_query, profiles=[reactive_elastic_query], label=null, version=7e5420a44d911dedd11d8c3dcb911f760ed895e2, state=null
+2023-08-31 01:53:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2023-08-31 01:53:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 227 ms. Found 0 Elasticsearch repository interfaces.
+2023-08-31 01:53:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2023-08-31 01:53:30 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 1 Reactive Elasticsearch repository interfaces.
+2023-08-31 01:53:31 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d7dcbb0-1d83-30bd-92b3-2268a30e4b94
+2023-08-31 01:53:32 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticDocumentController' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/api/ElasticDocumentController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterElasticQueryService' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterElasticQueryService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+2023-08-31 01:53:32 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-31 01:53:32 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticDocumentController' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/api/ElasticDocumentController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterElasticQueryService' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterElasticQueryService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.microservices.demo.reactive.elastic.query.service.ReactiveElasticQueryServiceApplication.main(ReactiveElasticQueryServiceApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterElasticQueryService' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterElasticQueryService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.lambda$instantiateClass$5(RepositoryFactorySupport.java:579)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.instantiateClass(RepositoryFactorySupport.java:579)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getTargetRepositoryViaReflection(RepositoryFactorySupport.java:544)
+	at org.springframework.data.elasticsearch.repository.support.ReactiveElasticsearchRepositoryFactory.getTargetRepository(ReactiveElasticsearchRepositoryFactory.java:89)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231)
+	at org.springframework.data.util.Lazy.get(Lazy.java:115)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.elasticsearch.repository.support.ReactiveElasticsearchRepositoryFactoryBean.afterPropertiesSet(ReactiveElasticsearchRepositoryFactoryBean.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 58 common frames omitted
+Caused by: org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpressions(TemplateAwareExpressionParser.java:107)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseTemplate(TemplateAwareExpressionParser.java:62)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpression(TemplateAwareExpressionParser.java:49)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.lambda$getExpressionForIndexName$3(SimpleElasticsearchPersistentEntity.java:330)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.getExpressionForIndexName(SimpleElasticsearchPersistentEntity.java:329)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.resolve(SimpleElasticsearchPersistentEntity.java:313)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.resolve(SimpleElasticsearchPersistentEntity.java:297)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.getIndexCoordinates(SimpleElasticsearchPersistentEntity.java:126)
+	at org.springframework.data.elasticsearch.core.ReactiveIndexTemplate.getIndexCoordinatesFor(ReactiveIndexTemplate.java:348)
+	at org.springframework.data.elasticsearch.core.ReactiveIndexTemplate.<init>(ReactiveIndexTemplate.java:97)
+	at org.springframework.data.elasticsearch.core.ReactiveElasticsearchTemplate.indexOps(ReactiveElasticsearchTemplate.java:742)
+	at org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository.<init>(SimpleReactiveElasticsearchRepository.java:58)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 71 common frames omitted
+2023-08-31 01:58:12 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-08-31 01:58:12 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - Starting ReactiveElasticQueryServiceApplication using Java 11.0.16 on localhost.localdomain with PID 13877 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-08-31 01:58:12 [main] INFO  c.m.d.r.e.q.s.ReactiveElasticQueryServiceApplication - The following 1 profile is active: "reactive_elastic_query"
+2023-08-31 01:58:12 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-08-31 01:58:12 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=config-client-reactive_elastic_query, profiles=[reactive_elastic_query], label=null, version=7e5420a44d911dedd11d8c3dcb911f760ed895e2, state=null
+2023-08-31 01:58:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2023-08-31 01:58:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 169 ms. Found 0 Elasticsearch repository interfaces.
+2023-08-31 01:58:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2023-08-31 01:58:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 1 Reactive Elasticsearch repository interfaces.
+2023-08-31 01:58:14 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4d7dcbb0-1d83-30bd-92b3-2268a30e4b94
+2023-08-31 01:58:15 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticDocumentController' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/api/ElasticDocumentController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterElasticQueryService' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterElasticQueryService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+2023-08-31 01:58:15 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-31 01:58:15 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'elasticDocumentController' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/api/ElasticDocumentController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterElasticQueryService' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterElasticQueryService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.microservices.demo.reactive.elastic.query.service.ReactiveElasticQueryServiceApplication.main(ReactiveElasticQueryServiceApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterElasticQueryService' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterElasticQueryService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'twitterReactiveElasticQueryClient' defined in file [/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/reactive-elastic-query-service/target/classes/com/microservices/demo/reactive/elastic/query/service/business/impl/TwitterReactiveElasticQueryClient.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'elasticQueryRepository' defined in com.microservices.demo.reactive.elastic.query.service.repository.ElasticQueryRepository defined in @EnableReactiveElasticsearchRepositories declared on ReactiveElasticsearchRepositoriesRegistrar.EnableElasticsearchRepositoriesConfiguration: Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository]: Constructor threw exception; nested exception is org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.lambda$instantiateClass$5(RepositoryFactorySupport.java:579)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.instantiateClass(RepositoryFactorySupport.java:579)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getTargetRepositoryViaReflection(RepositoryFactorySupport.java:544)
+	at org.springframework.data.elasticsearch.repository.support.ReactiveElasticsearchRepositoryFactory.getTargetRepository(ReactiveElasticsearchRepositoryFactory.java:89)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:325)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:323)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:231)
+	at org.springframework.data.util.Lazy.get(Lazy.java:115)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:329)
+	at org.springframework.data.elasticsearch.repository.support.ReactiveElasticsearchRepositoryFactoryBean.afterPropertiesSet(ReactiveElasticsearchRepositoryFactoryBean.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 58 common frames omitted
+Caused by: org.springframework.expression.ParseException: Expression [#{elasticConfigData.indexName] @0: No ending suffix '}' for expression starting at character 0: #{elasticConfigData.indexName
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpressions(TemplateAwareExpressionParser.java:107)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseTemplate(TemplateAwareExpressionParser.java:62)
+	at org.springframework.expression.common.TemplateAwareExpressionParser.parseExpression(TemplateAwareExpressionParser.java:49)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.lambda$getExpressionForIndexName$3(SimpleElasticsearchPersistentEntity.java:330)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.getExpressionForIndexName(SimpleElasticsearchPersistentEntity.java:329)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.resolve(SimpleElasticsearchPersistentEntity.java:313)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.resolve(SimpleElasticsearchPersistentEntity.java:297)
+	at org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPersistentEntity.getIndexCoordinates(SimpleElasticsearchPersistentEntity.java:126)
+	at org.springframework.data.elasticsearch.core.ReactiveIndexTemplate.getIndexCoordinatesFor(ReactiveIndexTemplate.java:348)
+	at org.springframework.data.elasticsearch.core.ReactiveIndexTemplate.<init>(ReactiveIndexTemplate.java:97)
+	at org.springframework.data.elasticsearch.core.ReactiveElasticsearchTemplate.indexOps(ReactiveElasticsearchTemplate.java:742)
+	at org.springframework.data.elasticsearch.repository.support.SimpleReactiveElasticsearchRepository.<init>(SimpleReactiveElasticsearchRepository.java:58)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 71 common frames omitted

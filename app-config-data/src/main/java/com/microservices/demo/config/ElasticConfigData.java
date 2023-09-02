@@ -13,4 +13,7 @@ public class ElasticConfigData {
     private Integer connectionTimeoutMs;
     private Integer socketTimeoutMs;
 
+//    public String getIndexName() {
+//        return indexName;
+//    }
 }

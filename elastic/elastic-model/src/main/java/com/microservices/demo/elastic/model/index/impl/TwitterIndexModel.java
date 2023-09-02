@@ -16,9 +16,11 @@ import java.time.ZonedDateTime;
 //This class converts TwittertoKafka object into an IndexModel object which will be later converted to a document
 //in elastic-index-client module.
 
+//@Document(indexName = "#{elasticConfigData.indexName") //indicates that this class is a candidate for mapping
 @Builder
 @Data
-@Document(indexName = "#{elasticConfigData.indexName") //indicates that this class is a candidate for mapping
+@Document(indexName = "#{@elasticConfigData.getIndexName()}")//"twitter-index")//"#{elasticConfigData.indexName}")
+// indicates that this class is a candidate for mapping
 // to elastic search. Moreover, we used spring expression language to fetch the index name from the config file.
 public class TwitterIndexModel implements IndexModel {
     @JsonProperty
