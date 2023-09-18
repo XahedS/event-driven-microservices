@@ -2,6 +2,8 @@
 <configuration>
     <property name="DEV_HOME" value="./reactive-elastic-query-service/logs"/>
     <property name="APP_NAME" value="reactive-elastic-query-service"/>
-
     <include resource="logback-common.xml"/>
+    <!--    <since logback-common.xml is defined in the resources folder of app-config-data, it will automatically
+    loaded in the class path. Just stating the log file name as logback.xml will start scanning the log file from
+    the top directory>-->
 </configuration>

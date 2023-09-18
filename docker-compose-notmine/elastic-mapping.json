@@ -1,0 +1,143 @@
+//#localhost:9200 This will help to check the localhost endpoint.
+//#In case of error while putting document into the index: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+//#Solution: curl -XPUT -H "Content-Type: application/json" http://localhost:9200/_all/_settings -d '{"index.blocks.read_only_allow_delete": null}'
+//#Create a new index by calling PUT /index-name endpoint in postman. e.g. localhost:9200/twitter-index ; observe the reply received from the elastic search
+//#Search for created document in the index: localhost:9200/twitter-index/_search?q=id:1, It is a GET request.
+//#Create a new document in the index: localhost:9200/twitter-index/_doc/1, this is a POST request.
+//Following is passed as Body
+//{
+//    "userId": "1",
+//    "id": "1",
+//    "createdAt": "2023-05-30T23:38:00+0000",
+//    "text": "testing"
+//
+//}
+
+
+//Use this with the PUT method in postman with following URL localhost:9200/twitter-index
+//Paste below in the body section and hit send. This will create a index with name twitter-index in elastic search.
+//Any document placed in this index will have UserID, ID, CreatedAt & text as key's. Below actually mapping defines the schema.
+{
+    "mappings": {
+        "properties": {
+            "userId": {
+                "type": "long"
+            },
+            "id": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            },
+            "createdAt": {
+                "type": "date",
+		"format": "yyyy-MM-dd'T'HH:mm:ssZZ"
+            },
+            "text": {
+                "type": "text",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword",
+                        "ignore_above": 256
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Following will be the reply from elastic search.
+//{
+//    "acknowledged": true,
+//    "shards_acknowledged": false,
+//    "index": "twitter-index"
+//}
+
+//localhost:9200/twitter-index/_doc/1 A post mehthod
+//{
+//    "userId": "1",
+//    "id": "1",
+//    "createdAt":  "2023-05-30'T'00:44:00+0000",
+//    "text": "test multi word"
+//}
+//
+ElasticSearch Queries:
+Get Queries:
+Search: localhost:9200/twitter-index/_search
+Search 50 queries: localhost:9200/twitter-index/_search?size=50
+Search based on id: localhost:9200/twitter-index/_search?q=id:1
+Search based on text: localhost:9200/twitter-index/_search?q=text:testing
+
+Post Queries: Provide query as JSON. Advantage: User can provide more complex queries using Elastic Search DSL (Domain Specific Language)
+1.General Format is:
+{
+    "query":{
+    "term":{
+      "text":"test"
+     }
+    }
+}
+The above query will return all the documents with test in the text field.
+2. Match Query: It uses every words in input query, analyse them and get combined results for each word. It is like OR operator for provided text.
+It will bring all documents which either have ipsum or testing or both.
+{
+    "query":{    
+    "match":{    
+      "text":"ipsum testing"
+     }
+    }
+}
+3. term query. If you want to find the document with exact texy use this query. note the document below I am searching contains exaxctly "testing on 
+June 18 23". If I pass below "testing on June 18 2" it will not return the document. This query is faster than previous two queries as there is no
+analyzers involved to analyze the texy and then search it!
+{
+    "query":{
+    "term":{
+      "text.keyword": "testing on June 18 23"
+     }
+    }
+}
+4. Wild Card Queries. Below query will return all the documents containing ips anywhere!
+{
+    "query":{
+    "wildcard":{
+      "text": "ips*"
+     }
+    }
+}
+5. Query String. Like wild card qurey but it analyzes the text. Provides more flexibility in searching the text. one can provide more query fields
+in the query_string (although this part not tested).
+
+{
+    "query":{
+    "query_string":{
+      "query": "text:testin?"
+     }
+    }
+}
+
+6. Complex Queries: You can also write more complex queries by just combining the different 	query types and use the keywords like 'should' for
+combining with OR operator; like wise 'must' for combining with AND operator.
+{
+    "from": 0,
+    "size": 20,
+    "query": {
+    	"bool": {
+    		"should": [
+    			{
+    				"match": {
+    					"text": "testing"
+    				}
+    			},
+    			{
+    				 "match": {
+    					"text": "ipsum"
+    				}
+    			}
+    			]
+    	}
+    }
+}

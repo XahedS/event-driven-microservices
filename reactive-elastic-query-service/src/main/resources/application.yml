@@ -8,7 +8,6 @@ spring:
   cloud:
     config:
       name: config-client-reactive_elastic_query
-#      name: config-client-reactive_elastic_query
       #Added the below user name and password for JCE encryption mechanism. JCE uses spring cloud
       username: spring_cloud_user
       #      password: springCloud_Pwd!

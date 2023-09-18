@@ -23,9 +23,9 @@ public class ElasticQueryWebClientConfigData {
         private String contentType;
         private String acceptType;
         private String baseUrl;
-//        Adding below fields for load balancer
-        private String serviceId;
-        private List<Instance> instances;
+//        Adding below fields for LoadBalanced
+//        private String serviceId;
+//        private List<Instance> instances;
     }
     @Data
     public static class Query {
@@ -33,11 +33,11 @@ public class ElasticQueryWebClientConfigData {
         private String accept;
         private String uri;
     }
-//Added below inner class to fetch instances of elastic-query-service
-    @Data
-    public static class Instance {
-        private String id;
-        private String host;
-        private Integer port;
-    }
+//Added below inner class to fetch instances of elastic-query-service for LoadBalancing
+//    @Data
+//    public static class Instance {
+//        private String id;
+//        private String host;
+//        private Integer port;
+//    }
 }
