@@ -1,0 +1,22 @@
+2023-09-20 01:57:29 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-09-20 01:57:29 [main] INFO  c.m.d.e.q.w.c.ElasticQueryWebClientApplication - Starting ElasticQueryWebClientApplication using Java 11.0.16 on localhost.localdomain with PID 9308 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/elastic-query-web-client/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-09-20 01:57:29 [main] INFO  c.m.d.e.q.w.c.ElasticQueryWebClientApplication - The following 1 profile is active: "elastic_query_web"
+2023-09-20 01:57:29 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-09-20 01:57:29 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=config-client-elastic_query_web, profiles=[elastic_query_web], label=null, version=6e9eeb7c1459f483db2036bdd84cd30ba6f53d85, state=null
+2023-09-20 01:57:31 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d12eae71-0dfd-39da-bb0e-3b36c6a3d04b
+2023-09-20 01:57:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8184 (http)
+2023-09-20 01:57:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8184"]
+2023-09-20 01:57:31 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-20 01:57:31 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-09-20 01:57:31 [main] INFO  o.a.c.c.C.[.[.[/elastic-query-web-client] - Initializing Spring embedded WebApplicationContext
+2023-09-20 01:57:31 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1795 ms
+2023-09-20 01:57:32 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@c9b5a99, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70be89ec, org.springframework.security.web.context.SecurityContextPersistenceFilter@52ba685a, org.springframework.security.web.header.HeaderWriterFilter@18ffca6c, org.springframework.security.web.csrf.CsrfFilter@27ec8754, org.springframework.security.web.authentication.logout.LogoutFilter@6842c101, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@69a5c6be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71d55b7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34edd065, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2aee0704, org.springframework.security.web.session.SessionManagementFilter@539c4830, org.springframework.security.web.access.ExceptionTranslationFilter@310d57b1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@578c3fd9]
+2023-09-20 01:57:32 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-09-20 01:57:33 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8184"]
+2023-09-20 01:57:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8184 (http) with context path '/elastic-query-web-client'
+2023-09-20 01:57:33 [main] INFO  c.m.d.e.q.w.c.ElasticQueryWebClientApplication - Started ElasticQueryWebClientApplication in 10.237 seconds (JVM running for 11.211)
+2023-09-20 01:57:52 [http-nio-8184-exec-2] INFO  o.a.c.c.C.[.[.[/elastic-query-web-client] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-20 01:57:52 [http-nio-8184-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-20 01:57:52 [http-nio-8184-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-09-20 01:58:20 [http-nio-8184-exec-8] INFO  c.m.d.e.q.w.c.api.QueryController - Querying with text sit
+2023-09-20 01:58:20 [http-nio-8184-exec-8] INFO  c.m.d.e.q.w.c.s.i.TwitterElasticQueryWebClient - Querying by text sit

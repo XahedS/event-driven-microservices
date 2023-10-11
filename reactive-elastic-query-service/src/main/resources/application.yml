@@ -1,9 +1,28 @@
 spring:
   application:
     name: reactive-elastic-query-service
-
+  #  data:
+  #    elasticsearch:
+  #      client:
+  #        reactive:
+  #          endpoints: localhost:9200
   profiles:
     active: reactive_elastic_query
+
+  #  webflux:
+  #    base-path: /reactive-elastic-query-service
+  #  codec:
+  #    max-in-memory-size: 25MB
+  #  data:
+  #    elasticsearch:
+  #      #      cluster-name: es-twitter-cluster
+  #      client:
+  #        reactive:
+  ##          endpoints: localhost:9200
+  #          max-in-memory-size: 25MB
+  #  elasticsearch:
+  #    rest:
+  #      uris: http://localhost:9200
 
   cloud:
     config:
@@ -16,3 +35,5 @@ spring:
   config:
     import: configserver:http://localhost:8888
 
+#  autoconfigure:
+#    exclude: org.springframework.boot.actuate.autoconfigure.elasticsearch.ElasticSearchReactiveHealthContributorAutoConfiguration, org.springframework.boot.autoconfigure.data.elasticsearch.ReactiveElasticsearchRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.data.elasticsearch.ReactiveElasticsearchRestClientAutoConfiguration

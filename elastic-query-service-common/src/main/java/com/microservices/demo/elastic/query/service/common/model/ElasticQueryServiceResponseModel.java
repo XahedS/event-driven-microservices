@@ -13,11 +13,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ElasticQueryServiceResponseModel extends RepresentationModel<ElasticQueryServiceResponseModel> {
-    //The added extension will change the Response Object to a Rest Representation model. This will be helpful in
-    //setting hateoas related links on the response object.
     private String id;
-    private String text;
     private Long userId;
-    private String textV2;
+    private String text;
     private LocalDateTime createdAt;
 }

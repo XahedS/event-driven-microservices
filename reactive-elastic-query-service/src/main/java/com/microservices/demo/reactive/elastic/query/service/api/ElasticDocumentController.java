@@ -17,23 +17,24 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping(value = "/documents")
 public class ElasticDocumentController {
+
     private static final Logger LOG = LoggerFactory.getLogger(ElasticDocumentController.class);
+
     private final ElasticQueryService elasticQueryService;
 
-    public ElasticDocumentController(ElasticQueryService elasticQueryService) {
-        this.elasticQueryService = elasticQueryService;
+    public ElasticDocumentController(ElasticQueryService queryService) {
+        this.elasticQueryService = queryService;
     }
+
     @PostMapping(value = "/get-doc-by-text",
-    produces = MediaType.TEXT_EVENT_STREAM_VALUE, //Make this endpoint an event stream endpoint and returns the response by chunks to the client.
-    consumes = MediaType.APPLICATION_JSON_VALUE)
+            produces = MediaType.TEXT_EVENT_STREAM_VALUE,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
     public Flux<ElasticQueryServiceResponseModel> getDocumentByText(
-             @RequestBody @Valid ElasticQueryServiceRequestModel requestModel)
-    {
+            @RequestBody @Valid ElasticQueryServiceRequestModel requestModel) {
         Flux<ElasticQueryServiceResponseModel> response =
-                elasticQueryService.getDocumentsByText(requestModel.getText());
+                elasticQueryService.getDocumentByText(requestModel.getText());
         response = response.log();
-//        The above method will observe all  reactive stream signals and trace them using logger support
-        LOG.info("Returning from query  reactive Service for text {}!", requestModel.getText());
+        LOG.info("Returning from query reactive service for text {}!", requestModel.getText());
         return response;
     }
 }

@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: reactive-elastic-query-service
+#  data:
+#    elasticsearch:
+#      client:
+#        reactive:
+#          endpoints: localhost:9200
+  profiles:
+    active: reactive_elastic_query
+
+#  webflux:
+#    base-path: /reactive-elastic-query-service
+#  codec:
+#    max-in-memory-size: 25MB
+#  data:
+#    elasticsearch:
+#      #      cluster-name: es-twitter-cluster
+#      client:
+#        reactive:
+##          endpoints: localhost:9200
+#          max-in-memory-size: 25MB
+#  elasticsearch:
+#    rest:
+#      uris: http://localhost:9200
+
+  cloud:
+    config:
+      name: config-client-reactive_elastic_query
+      #Added the below user name and password for JCE encryption mechanism. JCE uses spring cloud
+      username: spring_cloud_user
+      #      password: springCloud_Pwd!
+      password: '{cipher}864187498c1689c6845014ae2e538057aa7b374b5862a8604b183b5e61b23391d2cbb9b8c0118fa7039e048b3471eefe'
+
+  config:
+    import: configserver:http://localhost:8888
+
+#  autoconfigure:
+#    exclude: org.springframework.boot.actuate.autoconfigure.elasticsearch.ElasticSearchReactiveHealthContributorAutoConfiguration, org.springframework.boot.autoconfigure.data.elasticsearch.ReactiveElasticsearchRepositoriesAutoConfiguration, org.springframework.boot.autoconfigure.data.elasticsearch.ReactiveElasticsearchRestClientAutoConfiguration

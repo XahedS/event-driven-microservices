@@ -13,49 +13,42 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import java.util.HashMap;
 import java.util.Map;
 
-@ControllerAdvice //Enables exception handling globally (or across the whole application)
+@ControllerAdvice
 public class ElasticQueryServiceErrorHandler {
+
     private static final Logger LOG = LoggerFactory.getLogger(ElasticQueryServiceErrorHandler.class);
+
     @ExceptionHandler(AccessDeniedException.class)
-    //The annotation sets a specific exception to handle; e.g. at the moment will only handle AccessDeniedExption as
-    //passed in the arguments.
-    public ResponseEntity<String> handle(AccessDeniedException e){
+    public ResponseEntity<String> handle(AccessDeniedException e) {
         LOG.error("Access denied exception!", e);
-        return ResponseEntity.status(HttpStatus.FORBIDDEN).body("You are not allowed to access this resource");
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body("You are not authorized to access this resource!");
     }
 
     @ExceptionHandler(IllegalArgumentException.class)
-    //The annotation sets a specific exception to handle; e.g. at the moment will only handle IllegalArgumentException as
-    //passed in the arguments.
-    public ResponseEntity<String> handle(IllegalArgumentException e){
+    public ResponseEntity<String> handle(IllegalArgumentException e) {
         LOG.error("Illegal argument exception!", e);
         return ResponseEntity.badRequest().body("Illegal argument exception! " + e.getMessage());
     }
 
     @ExceptionHandler(RuntimeException.class)
-    //The annotation sets a specific exception to handle; e.g. at the moment will only handle RuntimeException as
-    //passed in the arguments.
-    public ResponseEntity<String> handle(RuntimeException e){
+    public ResponseEntity<String> handle(RuntimeException e) {
         LOG.error("Service runtime exception!", e);
-        return ResponseEntity.badRequest().body("Service runtime exception!" + e.getMessage());
+        return ResponseEntity.badRequest().body("Service runtime exception! " + e.getMessage());
     }
 
     @ExceptionHandler(Exception.class)
-    //The annotation sets a specific exception to handle; e.g. at the moment will only handle Exception as
-    //passed in the arguments.
-    public ResponseEntity<String> handle(Exception e){
-        LOG.error("Internal Server Error ! ", e);
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("A server error occurred!" + e.getMessage());
+    public ResponseEntity<String> handle(Exception e) {
+        LOG.error("Internal server error!", e);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("A server error occurred!");
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    //The annotation sets a specific exception to handle; e.g. at the moment will only handle MethodArgumentNotValidException
-    // as passed in the arguments.
-    public ResponseEntity<Map<String, String>> handle(MethodArgumentNotValidException e){
-        LOG.error("Method argument validation exception", e);
-        Map<String, String> errors  = new HashMap<>();
+    public ResponseEntity<Map<String, String>> handle(MethodArgumentNotValidException e) {
+        LOG.error("Method argument validation exception!", e);
+        Map<String, String> errors = new HashMap<>();
         e.getBindingResult().getAllErrors().forEach(error ->
-                errors.put(((FieldError)error).getField(), error.getDefaultMessage()));
+                errors.put(((FieldError) error).getField(), error.getDefaultMessage()));
         return ResponseEntity.badRequest().body(errors);
     }
+
 }
