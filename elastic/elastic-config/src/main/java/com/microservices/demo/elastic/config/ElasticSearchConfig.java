@@ -21,7 +21,7 @@ import java.util.Objects;
 //  provides a higher-level interface for interacting with Elasticsearch clusters. This class
 //consumes ElasticConfigdata defined inn app-config0-data module.
 @Configuration
-@EnableElasticsearchRepositories(basePackages = "com.microservices.demo.elastic")
+//@EnableElasticsearchRepositories(basePackages = "com.microservices.demo.elastic")
 public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
     private final ElasticConfigData elasticConfigData;
 
@@ -49,9 +49,9 @@ public class ElasticSearchConfig extends AbstractElasticsearchConfiguration {
 
     }
 
-    @Bean
-    public ElasticsearchOperations elasticsearchTemplate() {
-        return new ElasticsearchRestTemplate(elasticsearchClient());
-    }
+//    @Bean
+//    public ElasticsearchOperations elasticsearchTemplate() {
+//        return new ElasticsearchRestTemplate(elasticsearchClient());
+//    }
 
 }

@@ -10,8 +10,8 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
-import javax.json.Json;
-import java.time.LocalDateTime;
+//import javax.json.Json;
+//import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 //This class converts TwittertoKafka object into an IndexModel object which will be later converted to a document
 //in elastic-index-client module.
@@ -19,7 +19,7 @@ import java.time.ZonedDateTime;
 //@Document(indexName = "#{elasticConfigData.indexName") //indicates that this class is a candidate for mapping
 @Builder
 @Data
-@Document(indexName = "#{@elasticConfigData.getIndexName()}")//"twitter-index")//"#{elasticConfigData.indexName}")
+@Document(indexName = "twitter-index")//"#{@elasticConfigData.getIndexName()}")//"twitter-index")//"#{elasticConfigData.indexName}")
 // indicates that this class is a candidate for mapping
 // to elastic search. Moreover, we used spring expression language to fetch the index name from the config file.
 public class TwitterIndexModel implements IndexModel {

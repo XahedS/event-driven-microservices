@@ -68,7 +68,7 @@
 		<spring-boot-starter-thymeleaf.version>2.7.11</spring-boot-starter-thymeleaf.version>
 <!--		<spring-boot-thymeleaf-extras.version>3.1.0.RELEASE</spring-boot-thymeleaf-extras.version>-->
 		<spring-boot-thymeleaf-extras.version>3.0.4.RELEASE</spring-boot-thymeleaf-extras.version>
-		<spring-cloud-loadbalancer.version>3.1.4</spring-cloud-loadbalancer.version>
+<!--		<spring-cloud-loadbalancer.version>3.1.4</spring-cloud-loadbalancer.version>-->
 
 	</properties>
 
@@ -81,6 +81,12 @@
 
 	<dependencyManagement>
 		<dependencies>
+<!--			<dependency>-->
+<!--				<groupId>org.springframework.data</groupId>-->
+<!--				<artifactId>spring-data-commons</artifactId>-->
+<!--				<version>2.4.7</version>-->
+<!--			</dependency>-->
+
 			<dependency>
 				<groupId>com.microservices.demo</groupId>
 				<artifactId>elastic-query-web-client-common</artifactId>

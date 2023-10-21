@@ -13,13 +13,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
-
+//Used Pre-Authorize/Post-Authorize annotations to add method level security and check authorization using
+// hasRole, hasAuthority and hasPermission methods.
+@PreAuthorize("isAuthenticated()") //isAuthenticated method says that we only serve for the authenticated users
 @RestController
 @RequestMapping(value = "/documents", produces = "application/vnd.api.v1+json")
 //@RequestMapping(value = "/documents")
@@ -94,6 +97,8 @@ public class ElasticDocumentController {
         return ResponseEntity.ok(responseModelV2);
     }
 
+    @PreAuthorize("hasRole('APP_USER_ROLE') || hasAuthority('SCOPE_APP_USER_ROLE')")
+//    Accept the request only if the user has APP_USER_ROLE or SCOPE_APP_USER_ROLE authority
     @Operation(summary = "Get elastic document by Text")
     @ApiResponses(value= {
             @ApiResponse(responseCode = "200", description = "Success", content = {
