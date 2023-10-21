@@ -1,0 +1,25 @@
+2023-09-06 01:03:18 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-09-06 01:03:18 [main] INFO  c.m.d.e.q.s.ElasticQueryServiceApplication - Starting ElasticQueryServiceApplication using Java 11.0.16 on localhost.localdomain with PID 25556 (/root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo/elastic-query-service/target/classes started by root in /root/Downloads/technicalWork/idea-IC-222.3345.118/microservices-demo)
+2023-09-06 01:03:18 [main] INFO  c.m.d.e.q.s.ElasticQueryServiceApplication - The following 1 profile is active: "elastic_query"
+2023-09-06 01:03:18 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Fetching config from server at : http://localhost:8888
+2023-09-06 01:03:18 [main] INFO  o.s.c.c.c.ConfigServerConfigDataLoader - Located environment: name=config-client-elastic_query, profiles=[elastic_query], label=null, version=5c54d64a18ebcba582680f44bcaf85771db9c52a, state=null
+2023-09-06 01:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2023-09-06 01:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 Elasticsearch repository interfaces.
+2023-09-06 01:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2023-09-06 01:03:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Reactive Elasticsearch repository interfaces.
+2023-09-06 01:03:20 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2973dce7-4fed-3bbe-a4ec-bdc8ab8f00af
+2023-09-06 01:03:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8183 (http)
+2023-09-06 01:03:21 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8183"]
+2023-09-06 01:03:21 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-06 01:03:21 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.74]
+2023-09-06 01:03:21 [main] INFO  o.a.c.c.C.[.[.[/elastic-query-service] - Initializing Spring embedded WebApplicationContext
+2023-09-06 01:03:21 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2338 ms
+2023-09-06 01:03:22 [main] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/api-docs']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-09-06 01:03:22 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/api-docs']
+2023-09-06 01:03:22 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3add5e17, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c58d7be, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a117dc2, org.springframework.security.web.header.HeaderWriterFilter@5fa5c8cf, org.springframework.security.web.authentication.logout.LogoutFilter@39514976, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@70ee9d31, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@669c2b07, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c64339f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61b8c9de, org.springframework.security.web.session.SessionManagementFilter@6200b644, org.springframework.security.web.access.ExceptionTranslationFilter@299a43d9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b751cb1]
+2023-09-06 01:03:24 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8183"]
+2023-09-06 01:03:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8183 (http) with context path '/elastic-query-service'
+2023-09-06 01:03:24 [main] INFO  c.m.d.e.q.s.ElasticQueryServiceApplication - Started ElasticQueryServiceApplication in 11.672 seconds (JVM running for 13.135)
+2023-09-06 01:04:50 [http-nio-8183-exec-1] INFO  o.a.c.c.C.[.[.[/elastic-query-service] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-06 01:04:50 [http-nio-8183-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-06 01:04:50 [http-nio-8183-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
